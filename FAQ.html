@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<!DOCTYPE html>
+<!This code was modified from https://github.com/Varshithvhegde/chatbot/blob/main/index.html> 
+
+<html lang="en">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/chat.css">
+    <script src="js/chat.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/png" href="images/krut.png" />
+    <meta property="og:image:width" content="300">
+    <meta property="og:image:height" content="300">
+    <meta property="og:updated_time" content="1440432930" />
+
+<title>MNRE | Consult</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#Question {
+  background-image: url('images/search.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#Answer {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#Answer li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; 
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#Answer li a:hover:not(.header) {
+  background-color: #eee;
+}
+</style>
+
+</head>
+
+<body onload="startFunction()">
+
+
+  <nav>
+
+        <div class="navbar">
+            <img class="dpimg" onclick="openFullScreenDP()" src="images/mnre.png" alt="">
+            <div class="personalInfo">
+                <label id="name">ศูนย์บริการร่วม ทส.</label>
+                <label id="lastseen"></label>
+            </div>
+        </div>
+
+    </nav>
+
+ <div class="scrollable" id="myScrollable">
+      <div id="chatting" class="chatting">
+
+<input type="text" id="Question" onkeyup="myFunction()" placeholder="โปรดพิมพ์เรื่องที่ต้องการติดต่อค่ะ..." title="คำถามที่ท่านเลือกค่ะ">
+
+<ul id="Answer">
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+ <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="/info">ยื่นคำขอข้อมูลข่าวสารของกระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม ผ่านระบบ e-Request</a></li>
+  <li><a href="faq/A001.html">การต่ออายุใบอนุญาตกิจการน้ำบาดาล มีวิธีการอย่างไร</a></li>
+  <li><a href="faq/A002.html">บ่อน้ำบาดาลประเภทใดที่ต้องขออนุญาตเจาะหรือขอใช้</a></li>
+  <li><a href="faq/A003.html">วิธีขออนุญาตเจาะน้ำบาดาลหรือใช้น้ำบาดาล</a></li>
+  <li><a href="faq/A004.html">อบต. ต้องการเจาะน้ำบาดาล ไม่มีผู้รับจ้าง</a></li>
+  <li><a href="faq/A005.html">อบต. ต้องขออนุญาตเจาะน้ำบาดาลหรือไม่</a></li>
+  <li><a href="faq/A006.html">เจาะน้ำบาดาล แล้วไม่ได้น้ำบาดาล เช่น น้ำเค็ม ต้องทำอย่างไร</a></li>
+  <li><a href="faq/A007.html">ต้องการยกเลิกใช้น้ำบาดาล ต้องทำอย่างไร</a></li>
+  <li><a href="faq/A008.html">ดาวน์โหลดแบบคำขอหรือแบบฟอร์มกิจการน้ำบาดาล</a></li>
+  <li><a href="faq/A009.html">เจาะน้ำใต้ดิน ไม่ถึงชั้นน้ำบาดาล ต้องขอรับใบอนุญาตหรือไม่</a></li>
+  <li><a href="faq/A010.html">ต้องการจดทะเบียนองค์กรเอกชนด้านการคุ้มครองสิ่งแวดล้อมและอนุรักษ์ทรัพยากรธรรมชาติ ต้องดำเนินการอย่างไร</a></li>
+  <li><a href="IDGen.html">ออกรหัสคำขอ ด้วยโปรแกรม idGen</a></li>
+  <li><a href="https://naturebi.mnre.go.th/highlight">ข้อมูลรายงานสถานการณ์ด้านทรัพยากรธรรมชาติและสิ่งแวดล้อม</a></li>
+   <li><a href="https://www.mnre.go.th/th/service/more/1423">ขอทราบข่าวหนังสือพิมพ์เกี่ยวกับทรัพยากรธรรมชาติและสิ่งแวดล้อม</a></li>
+  <li><a href="https://info.go.th/emergency-number">หมายเลขโทรศัพท์ฉุกฉิน เบอร์โทรฉุกเฉิน</a></li>
+  <li><a href="https://info.go.th/emergency-number">เหตุด่วนเหตุร้าย หมายเลขโทรศัพท์ 191</a></li>
+  <li><a href="https://info.go.th/emergency-number">แจ้งเจ็บป่วยฉุกเฉิน หมายเลขโทรศัพท์ 1669</a></li> 
+  <li><a href="https://info.go.th/emergency-number">แจ้งคนหาย หมายเลขโทรศัพท์ 1300</a></li> 
+  <li><a href="https://info.go.th/emergency-number">แจ้งอุบัติเหตุทางน้ำ หมายเลขโทรศัพท์ 1196</a></li>
+  <li><a href="https://info.go.th/emergency-number">แจ้ง จส. 100 หมายเลขโทรศัพท์ 1137</a></li> 
+  <li><a href="https://info.go.th/emergency-number">แจ้งรถหาย หมายเลขโทรศัพท์ 1192</a></li> 
+  <li><a href="https://info.go.th/emergency-number">แจ้งไฟไหม้ เพลิงไหม้ อัคคีภัย สัตว์ป่าเข้าบ้าน หมายเลขโทรศัพท์ 199</a></li>
+  <li><a href="https://info.go.th/emergency-number">แจ้งหน่วยแพทย์ กู้ชีวิต  หมายเลขโทรศัพท์ 1554</a></li> 
+  <li><a href="https://info.go.th/emergency-number">แจ้งศูนย์ร้องทุกข์ กรุงเทพฯ หมายเลขโทรศัพท์ 1555</a></li>  
+  <li><a href="https://info.go.th/emergency-number">แจ้งตำรวจท่องเที่ยว หมายเลขโทรศัพท์ 1155</a></li> 
+  <li><a href="https://info.go.th/emergency-number">แจ้งเบาะแส การกระทำผิด ด้านทรัพยากรธรรมชาติและสิ่งแวดล้อม หมายเลขโทรศัพท์ Green Call 1310</a></li>  
+  <li><a href="https://info.go.th/emergency-number">แจ้งตำรวจทางหลวง หมายเลขโทรศัพท์ 1193</a></li> 
+  <li><a href="https://info.go.th/emergency-number">แจ้ง ขสมก. หมายเลขโทรศัพท์ 1348</a></li>
+ <li><a href="https://info.go.th/emergency-number">แจ้งบริษัทขนส่ง จำกัด หมายเลขโทรศัพท์ 1490</a></li> 
+ <li><a href="https://info.go.th/emergency-number">แจ้งรถไฟฟ้า บีทีเอส BTS หมายเลขโทรศัพท์ 02-617-6000</a></li> 
+ <li><a href="https://info.go.th/emergency-number">แจ้งท่าอากาศยานสุวรรณภูมิ หมายเลขโทรศัพท์ 02-132-1000</a></li> 
+<li><a href="https://info.go.th/emergency-number">แจ้งกรมการขนส่งทางบก หมายเลขโทรศัพท์ 1584</a></li> 
+<li><a href="https://info.go.th/emergency-number">แจ้งกรมทางพิเศษแห่งประเทศไทย หมายเลขโทรศัพท์ 1543</a></li> 
+<li><a href="https://info.go.th/emergency-number">แจ้งรถไฟฟ้าแห่งประเทศไทย หมายเลขโทรศัพท์ 1690</a></li> 
+<li><a href="https://info.go.th/emergency-number">แจ้งการไฟฟ้านครหลวง 1130</a></li> 
+<li><a href="https://info.go.th/emergency-number">แจ้งการไฟฟ้าส่วนภูมิภาค หมายเลขโทรศัพท์ 1129</a></li> 
+<li><a href="https://info.go.th/emergency-number">แจ้งการประปานครหลวง หมายเลขโทรศัพท์ 1125</a></li> 
+<li><a href="https://info.go.th/emergency-number">แจ้งการประปาส่วนภูมิภาค หมายเลขโทรศัพท์ 1662</a></li> 
+<li><a href="https://www.pcd.go.th">กรมควบคุมมลพิษ (คพ.) หมายเลขโทรศัพท์ 02-298-2000-12</a></li> 
+<li><a href="https://www.deqp.go.th">กรมส่งเสริมคุณภาพสิ่งแวดล้อม (สส.) หมายเลขโทรศัพท์ 022788400-19</a></li> 
+<li><a href="https://www.onep.go.th">สำนักงานนโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม (สผ.) หมายเลขโทรศัพท์ 02-265-6500</a></li> 
+<li><a href="https://portal.dnp.go.th">กรมอุทยานแห่งชาติ สัตว์ป่าและพันธุ์พืช (อส.) หมายเลขโทรศัพท์ 02-561-0777</a></li> 
+<li><a href="https://www.forest.go.th/home/">กรมป่าไม้ (ปม.) หมายเลขโทรศัพท์ 02-561-4292-3</a></li> 
+<li><a href="https://www.dmcr.go.th/home">กรมทรัพยากรทางทะเลและชายฝั่ง (ทช.) หมายเลขโทรศัพท์ 02-141-1300</a></li> 
+<li><a href="https://www.dmr.go.th">กรมทรัพยากรธรณี (ทธ.) หมายเลขโทรศัพท์ 02-621-9500</a></li> 
+<li><a href="http://www.dgr.go.th/th/home">กรมทรัพยากรน้ำบาดาล (ทบ.) หมายเลขโทรศัพท์ 02-666-7000</a></li> 
+<li><a href="https://www.dwr.go.th">กรมทรัพยากรน้ำ (ทน.) หมายเลขโทรศัพท์ 02-271-6000-2</a></li> 
+<li><a href=" http://www.qsbg.org">องค์การสวนพฤกศาสตร์ (อสพ.) หมายเลขโทรศัพท์ 053-299-754</a></li> 
+<li><a href="https://www.zoothailand.org/index.php">องค์การสวนสัตว์แห่งประเทศไทย ในพระบรมราชูปถัมภ์ (อสส.) หมายเลขโทรศัพท์  02-163-4955</a></li> 
+<li><a href="http://www.tgo.or.th/2020">องค์การบริหารจัดการก๊าซเรือนกระจก (องค์การมหาชน) หมายเลขโทรศัพท์ 02-141-9790</a></li>
+<li><a href="https://www.bedo.or.th">สถาบันพัฒนาเศรษฐกิจจากฐานชีวภาพ (สพภ.) หมายเลขโทรศัพท์   02-141-7800</a></li>
+<li><a href="https://www.mnre.go.th">สำนักงานปลัดกระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม (สป.ทส.) หมายเลขโทรศัพท์   02-278-8500 และ 1310</a></li>
+<li><a href="#">สามารถยื่นคำอุทธรณ์คำสั่งปฏิเสธการเปิดเผยข้อมูลข่าวสารของราชการ โดยยื่นอุทธรณ์เป็นหนังสือต่อประธานกรรมการข้อมูลข่าวสารของราชการ สำนักงานคณะกรรมการข้อมูลข่าวสารของราชการ ภายใน 15 วันนับแต่วันที่ทราบคำสั่งนั้น</a></li>
+<li><a href="#">ตราสัญลักษณ์ของส่วนราชการ (กรม) รัฐวิสาหกิจ และองค์การมหาชน ในสังกัดกระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม
+<br>
+<center><img id="myImage" src="images/faq.svg" style="width:200px"></center><br>
+
+<button onclick='document.getElementById("myImage").src="images/mnre.png"'>
+สำนักงานปลัดกระทรวง</button>
+
+<button onclick='document.getElementById("myImage").src = "images/logopcd.png"'>
+กรมควบคุมมลพิษ</button>
+
+<button onclick='document.getElementById("myImage").src = "images/logodeqp.png"'>
+กรมส่งเสริมคุณภาพสิ่งแวดล้อม</button>
+
+<button onclick='document.getElementById("myImage").src = "images/logoonep.png"'>
+สำนักงานโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม</button>
+
+<button onclick='document.getElementById("myImage").src = "images/logorfd.png"'>
+กรมป่าไม้</button>
+
+<button onclick='document.getElementById("myImage").src = "images/logodnp.png"'>
+กรมอุทยานแห่งชาติ สัตว์ป่าและพันธุ์พืช</button>
+
+<button onclick='document.getElementById("myImage").src = "images/logodwr.png"'>
+กรมทรัพยากรน้ำ</button>
+
+<button onclick='document.getElementById("myImage").src = "images/logogwrd.png"'>
+กรมทรัพยากรน้ำบาดาล</button>
+
+<button onclick='document.getElementById("myImage").src = "images/logozpot.png"'>
+องค์การสวนสัตว์แห่งประเทศไทย ในพระบรมราชูปถัมภ์</button>
+
+<button onclick='document.getElementById("myImage").src = "images/logofio.png"'>
+องค์การอุตสาหกรรมป่าไม้</button>
+
+<button onclick='document.getElementById("myImage").src = "images/logobgo.png"'>
+องค์การสวนพฤกศาสตร์</button>
+
+<button onclick='document.getElementById("myImage").src = "images/logotgo.png"'>
+องค์การบริหารจัดการก๊าซเรือนกระจก (องค์การมหาชน)</button>
+
+<button onclick='document.getElementById("myImage").src = "images/logobedo.png"'>
+สถาบันพัฒนาเศรษฐกิจจากฐานชีวภาพ (องค์การมหาชน)</button>
+
+</a>
+</li>
+
+  
+</ul>
+
+</div>
+</div>
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("Question");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("Answer");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+</body>
+</html>
