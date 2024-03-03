@@ -151,7 +151,7 @@ function addSociete( $nom, $adresse )
 	$this->SetXY( $x1, $y1 + 4 );
 	$this->SetFont('Arial','',10);
 	$length = $this->GetStringWidth( $adresse );
-	//Coordonnées de la société
+	//Coordonnà¹‰es de la socià¹‰tà¹‰
 	$lignes = $this->sizeOfText( $adresse, $length) ;
 	$this->MultiCell($length, 4, $adresse);
 }
@@ -303,13 +303,13 @@ function addNumTVA($tva)
 	$this->SetFont( "Arial", "B", 10);
 	$r1  = $this->w - 80;
 	$r2  = $r1 + 70;
-	$y1  = 80;
+	$y1  = 52;
 	$y2  = $y1+10;
 	$mid = $y1 + (($y2-$y1) / 2);
 	$this->RoundedRect($r1, $y1, ($r2 - $r1), ($y2-$y1), 2.5, 'D');
 	$this->Line( $r1, $mid, $r2, $mid);
 	$this->SetXY( $r1 + 16 , $y1+1 );
-	$this->Cell(40, 4, "TVA Intracommunautaire", '', '', "C");
+	$this->Cell(40, 4, "e-Invoice Number", '', '', "C");
 	$this->SetFont( "Arial", "", 10);
 	$this->SetXY( $r1 + 16 , $y1+5 );
 	$this->Cell(40, 5, $tva, '', '', "C");
@@ -318,13 +318,13 @@ function addNumTVA($tva)
 function addReference($ref)
 {
 	$this->SetFont( "Arial", "", 10);
-	$length = $this->GetStringWidth( "Références : " . $ref );
+	$length = $this->GetStringWidth( "Rà¹‰fà¹‰rences : " . $ref );
 	$r1  = 10;
 	$r2  = $r1 + $length;
 	$y1  = 92;
 	$y2  = $y1+5;
 	$this->SetXY( $r1 , $y1 );
-	$this->Cell($length,4, "Références : " . $ref);
+	$this->Cell($length,4, "Rà¹‰fà¹‰rences : " . $ref);
 }
 
 function addCols( $tab )
@@ -628,7 +628,7 @@ function addTVAs( $params, $tab_tva, $invoice )
 		{
 			$accompteTTC=sprintf ("%.2F", $params["accompte"]);
 			if ( strlen ($params["Remarque"]) == 0 )
-				$this->addRemarque( "Accompte de $accompteTTC Euros exigé à la commande.");
+				$this->addRemarque( "Accompte de $accompteTTC Euros exigà¹‰ à¹€ la commande.");
 			else
 				$this->addRemarque( $params["Remarque"] );
 		}
@@ -640,12 +640,12 @@ function addTVAs( $params, $tab_tva, $invoice )
 			$accompteTTC=sprintf("%.2F", $totalTTC * $percent);
 			$percent100 = $percent * 100;
 			if ( strlen ($params["Remarque"]) == 0 )
-				$this->addRemarque( "Accompte de $percent100 % (soit $accompteTTC Euros) exigé à la commande." );
+				$this->addRemarque( "Accompte de $percent100 % (soit $accompteTTC Euros) exigà¹‰ à¹€ la commande." );
 			else
 				$this->addRemarque( $params["Remarque"] );
 		}
 		else
-			$this->addRemarque( "Drôle d'acompte !!! " . $params["Remarque"]);
+			$this->addRemarque( "Drà¹”le d'acompte !!! " . $params["Remarque"]);
 	}
 	else
 	{
