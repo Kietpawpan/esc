@@ -1,48 +1,5 @@
-<!DOCTYPE html><!-- UPDATE.PHP DATABASE UPDATING PROGRAM
-
-                                @                                
-   ::                          =%.                          ::   
- :::::                        *@@@=                        ::::: 
-  :::::                       *##*#                       :::::. 
-::.::.::.    :             .@%%##%%*@              :.   .::.::.::
- ::::::.::. .:::::%-       *@::::::-@+       +#:::::. .::.:::::: 
- .:::::::::::::             @*:+@@++*             ::.:::::.::::. 
- .:::.:::.:::*:-+           @:#= :+::          .#--+:::.:::.:::. 
-   .::::::::.:::::::. :. :  ..:=%-:-   . .: .:::::::.::::::::.   
-   .:::::::::::.:.:::::+#:::-#::-::+-:::#=:::::.:::::::::::::.   
-     ::::::::::::::::::*+::::#-#++-*::::++::.:::::::::::::::     
-      .:.:::::.:::::::::::::::::@-::::::::::::::::.:::::...      
-           .:::::::.:.:::::::::::::::::::::.:.:::::::.           
-             :::.:::::::::.%+#*%@#**#@::::::::::.:::             
-              .:::::::::::::#%#%@%#@%::::::::::.:::              
-                .:::::.:::::::::::::::::::::::::.                
-                   ...::::: ::::::::: ::.::...                   
-                      =  ..+-::...::#*.. .=                      
-                   ::::%+...*#==%++##...*#::::.                  
-                 .:::::::@%:....#..+.:%%:::::::.                 
-                 :::::::.:.:#%+.@.+%*:::.:::::::.                
-                 .:::::.:::*::-...=::*::.::::::.                 
-                          #@@=..@-.=@@@.                         
-                  +-*%   +%@....:....@@*   +%**                  
-                 :-.*@@@@% %-...*...=# %@@@@%==#                 
-                   %=+@@@@ :@%..:..#@: @@@@%+*                   
-                   .     ::::::@.@:::::-.    .                   
-                         ::::::.%.::::::                         
-                           ..:::::::::                           
-                                :                                
-
- ____________________________________________________
-|\\\1\\\\\\2\\\\\\3\\\\\\||//////5///////6///////7///|
-|\\\\\\: : : :: :DEVELOPER INFORMATION : : :::://////|
-| Copyright © 2023 MNRE-SLC  All rights reserved.    |
-| Contact: servicelinkcenter@mnre.go.th              |
-| Author: Montri Kiatphaophan (monte.k@gmnre.go.th)  |
-| version 1.0.1 | Sep. 22, 2023 .     .     .     ...|
-|////////||\\\\\\\\\/////////||\\\\\\\///////||\\\\\\|
-TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
-                                                                                                        
-               
---><html>
+<!DOCTYPE html>
+<html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8">
@@ -82,7 +39,7 @@ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 			border-color:grey' 
 		type="text" 
 		id="Question" 
-		value="Hashing Machine" 
+		value="ระบบเข้ารหัส PIN Code" 
 		title="ID">
 
  	<div 
@@ -95,26 +52,24 @@ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 		<ul id="Answer">
    			<li><a href="#">
 <?php
-$pin = '1310';
+$pin = $_POST['pin'];
 ?>
-			เลขประจำตัวประชาชน (13 หลัก) : <div id="required" style="color:red;size=-1"></div> 
+			Hashed PIN (SHA3-512): <div id="required" style="color:red;size=-1"></div> 
 			<input 
-				type="password" 
 				pattern="[0-9]*" 
 				inputmode="numeric" 
 				id="input" 
-				maxlength="13" 
+				maxlength="1000" 
 				name="userID"
 				required 
 				placeholder="1234567890123" 
 				size="13" 
-				style="width:50%" 
-				value=<?php echo hash('sha256', $pin)?> />
-   			 <i 
-				class="bi bi-eye-slash" 
-				id="togglePassword">
-			</i>
+				style="width:100%" 
+				value=<?php echo hash('sha3-512', $pin)?> />
+   			 
 			<br>
+			<br>
+				<input class='btn' type='button' value='Copy' style='width:100px' onclick="copyForm()">
 	
 		
 
@@ -132,47 +87,24 @@ $pin = '1310';
 </div>
        	</a>
 	</li>
-        <li><center><div id="copyRight"></div></center></li>
+      
 </div>
 </div>
 
 <br>
 
-<!HASH THE ID NUMBER WITH SHA3 512>	
-    <script src="info/js/sha3.min.js"></script>
-    <script>method = sha3_512;</script>
 
-<!REPORT THE PROGRESS>
-    	<script type='text/javascript' src="info/js/progress.js"></script>
-    	<script type='text/javascript'>
-		function progress(){
-			let nid = document.getElementById('input').value;
-			let nidh = document.getElementById('output').value;
-			let progress = document.getElementById('progress').value;
-			let dataCode = "'"+progress+"'=>" + "'"+nidh+"',\n);?>"
-			if(nid=='' || nidh==''){
-				document.getElementById("required").innerHTML = "* ข้อมูลจำเป็น กรอกแล้วกด ยืนยัน อีกครั้ง";
-				alert('โปรดกรอกหมายเลขประจำตัวประชาชน');
-			}
-			else if(progress==''){alert('โปรดกรอกข้อมูลความคืบหน้า');}
-			else {document.getElementById('outputCode').value = dataCode;}
-			}
-	</script>
-
-<!HIDE NATIONAL ID NUMBER>
+		
+<!COPY TEXT>
 	<script type='text/javascript'>
-        	const togglePassword = document.querySelector("#togglePassword");
-	        const password = document.querySelector("#input");
-        	togglePassword.addEventListener("click", function () {
-	            const type = password.getAttribute("type") === "password" ? "text" : "password";
-        	    password.setAttribute("type", type);
-                    this.classList.toggle("bi-eye");
-	        });
-    		const form = document.querySelector("form");
-        	form.addEventListener('submit', function (e) {
-	        e.preventDefault();
-	        });
-    	</script>
+function copyForm() {
+  const element = document.querySelector('#input');
+  element.select();
+  element.setSelectionRange(0, 99999);
+  document.execCommand('copy');
+  window.alert("Copied!");
+}		
+</script>
 		
 </body>
 </html>
