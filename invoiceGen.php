@@ -100,7 +100,31 @@
 				size="13" 
 				style="width:50%" 
 				oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');" />
-   			 
+   	
+			<br>
+	        <br>	
+				เจ้าหน้าที่: <div id="required" style="color:red;size=-1"></div> 
+			<select id="required" name='officer' required>
+				<option value=""></option> 
+				<option value="นายมนตรี เกียรติเผ่าพันธ์">นายมนตรี เกียรติเผ่าพันธ์</option> 
+				<option value="นายประจักษ์ชัย อาจคงหาญ">นายประจักษ์ชัย อาจคงหาญ</option> 
+				<option value="นางสาวทัศนีย์ เดชปรารมย์">นางสาวทัศนีย์ เดชปรารมย์</option> 
+				<option value="นายพิพัฒน์ พึ่งบุญ">นายพิพัฒน์ พึ่งบุญ</option> 
+				<option value="นางจิราพร กาญจนาอร่ามวงศ์">นางจิราพร กาญจนาอร่ามวงศ์</option> 
+				<option value="นางสาวจิราภา ฮะซุ่นเฮง">นางสาวจิราภา ฮะซุ่นเฮง</option> 
+		</select>
+		<br>
+	        <br>	
+				ตำแหน่ง: <div id="required" style="color:red;size=-1"></div> 
+			<select id="required" name='position' required>
+				<option value=""></option> 
+				<option value="นักวิเคราะห์นโยบายและแผนชำนาญการพิเศษ">นักวิเคราะห์นโยบายและแผนชำนาญการพิเศษ</option> 
+				<option value="นักวิเคราะห์นโยบายและแผนชำนาญการ">นักวิเคราะห์นโยบายและแผนชำนาญการ</option> 
+				<option value="นักวิชาการสิ่งแวดล้อม">นักวิชาการสิ่งแวดล้อม</option> 
+				<option value="นักวิชาการเผยแพร่">นักวิชาการเผยแพร่</option> 
+				<option value=">เจ้าหน้าที่ธุรการ">เจ้าหน้าที่ธุรการ</option> 
+			
+		</select>
 			<br>
 	        <br>	
 				PIN Code: <div id="required" style="color:red;size=-1"></div> 
