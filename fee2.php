@@ -91,6 +91,7 @@ function baht_text ($number, $include_unit = true, $display_zero = true)
     return $text;
 }
 // End baht text code 
+
  
  require('invoice.php');
 
@@ -104,6 +105,8 @@ function baht_text ($number, $include_unit = true, $display_zero = true)
  $copyPage = $_POST['page'];
  $signNumber = $_POST['sign'];
  $pin = $_POST['pin'];
+ $officer=$_POST['officer'];
+ $position = $_POST['position'];
  $totalCopyFee = $copyFee * $copyPage;
  $totalSignFee = $signFee * $signNumber;
  $totalFee = $totalCopyFee + $totalSignFee;
@@ -158,14 +161,14 @@ $cols=array(iconv('UTF-8','cp874','ที่')   => 23,
              iconv('UTF-8','cp874','จำนวน')     => 22,
              iconv('UTF-8','cp874','บาท/หน่วย')      => 26,
              iconv('UTF-8','cp874','เป็นเงิน') => 30,
-             "CUR"          => 11 );
+             iconv('UTF-8','cp874','สกุล')          => 11 );
 $pdf->addCols( $cols);
 $cols=array( iconv('UTF-8','cp874','ที่')    => "C",
              iconv('UTF-8','cp874','รายการ')  => "L",
              iconv('UTF-8','cp874','จำนวน')     => "C",
              iconv('UTF-8','cp874','บาท/หน่วย')      => "R",
              iconv('UTF-8','cp874','เป็นเงิน') => "R",
-             "CUR"          => "C" );
+             iconv('UTF-8','cp874','สกุล')          => "C" );
 $pdf->addLineFormat( $cols);
 $pdf->addLineFormat($cols);
 
@@ -177,7 +180,7 @@ $line = array( iconv('UTF-8','cp874','ที่')    => '1',
                iconv('UTF-8','cp874','จำนวน')     => strval(number_format($copyPage)),
                iconv('UTF-8','cp874','บาท/หน่วย')      => strval(number_format($copyFee, 2)),  
                iconv('UTF-8','cp874','เป็นเงิน') => strval(number_format($totalCopyFee, 2)),
-               "CUR"          => iconv('UTF-8','cp874','฿') );
+               iconv('UTF-8','cp874','สกุล')          => iconv('UTF-8','cp874','฿') );
 $size = $pdf->addLine( $y, $line );
 $y   += $size + 2;
 
@@ -188,7 +191,7 @@ $line = array( iconv('UTF-8','cp874','ที่')   => "2",
                iconv('UTF-8','cp874','จำนวน')     => strval(number_format($signNumber)),
                iconv('UTF-8','cp874','บาท/หน่วย')      => strval(number_format($signFee, 2)),
                iconv('UTF-8','cp874','เป็นเงิน') => strval(number_format($totalSignFee, 2)),
-               "CUR"          => iconv('UTF-8','cp874','฿') );
+               iconv('UTF-8','cp874','สกุล')          => iconv('UTF-8','cp874','฿') );
  
 $size = $pdf->addLine( $y, $line );
 
@@ -202,7 +205,7 @@ $line = array( iconv('UTF-8','cp874','ที่')   => iconv('UTF-8','cp874',' '
                iconv('UTF-8','cp874','จำนวน')     => " ",
                iconv('UTF-8','cp874','บาท/หน่วย')      => " ",
                iconv('UTF-8','cp874','เป็นเงิน') => strval(number_format($totalFee, 2)),
-               "CUR"          => iconv('UTF-8','cp874','฿') );
+               iconv('UTF-8','cp874','สกุล')          => iconv('UTF-8','cp874','฿') );
  
 $size = $pdf->addLine( $y, $line );
 
@@ -210,12 +213,15 @@ $y   += $size + 2;
 
 $timeNow = strval(time());
 
-$hash = '28995a2c0d04b66d5c7c818536bb00cd1fc1ac422aea47627de0999782fee3f4';
-if(hash('sha256',$pin)==$hash){
+$hash = 'c08fcfd8fac91ca096cc64f1a804400d63355fbda6fbed08cd69fc358c1bb09b86076ddd486556dc2d98812960b8272b27da41249d63735fe63032af4668661e';
+if(hash('sha3-512',$pin)==$hash){
 $pdf->SetY(-47);
 $pdf->Cell(0, 7, iconv('UTF-8','cp874','ศููนย์บริการร่วมกระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม'), 0, 0, 'C');
 $pdf->SetY(-37);
-$pdf->Cell(0, 0, 'e-INVOICE Reference: ' . 'https://esc.mnre.go.th/invoice/' . $timeNow . '.pdf ', 0, 0, 'C');
+$pdf->Cell(0, 0, 'e-INVOICE Reference Number: ' . $timeNow, 0, 0, 'C');
+$pdf->SetY(-30);
+$pdf->SetFont('THSarabunNew','', 12);
+$pdf->Cell(0, 0, iconv('UTF-8','cp874','ผูู้ออกใบแจ้งค่าธรรมเนียม ') . ': '  . iconv('UTF-8','cp874', $officer) . ' ' . iconv('UTF-8','cp874', $position) . iconv('UTF-8','cp874',' ศบร.ทส.'), 0, 0, 'C');
 $pdf->image('images/lineoa.png', 10,250,20,0,'', 'https://lin.ee/1ltKjol');
 $pdf->SetY(-29);
 $pdf->SetFont('THSarabunNew','', 14);
@@ -223,7 +229,7 @@ $pdf->Cell(0, 7, iconv('UTF-8','cp874','ส่งหลักฐานโอน�
 $pdf->temporaire( "Approved" );
 $pdf->Output();
 //$mpdf->Output($timeNow . '.pdf', \Mpdf\Output\Destination::FILE);
-$pdf->Output('F', 'invoice/'. $timeNow. '.pdf');
+$pdf->Output('F', 'einvoice/'. $timeNow. '.pdf');
 }
 else{
 $pdf->SetY(-47);
