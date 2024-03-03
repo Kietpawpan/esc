@@ -139,6 +139,8 @@ $pdf->MultiCell(100,5, iconv('UTF-8','cp874','98 ซอยพหลโยธิ�
 $pdf->MultiCell(100,5,"Tel. 0 2265 6223-5; Email: servicelinkcenter@mnre.go.th
  ");
 
+$timeNow = strval(time()); 
+
 $pdf->SetFont('THSarabunNew','B',18);			
 $pdf->MultiCell(100,10, iconv('UTF-8','cp874','เงื่อนไขบริการ'), 1, 'C');
 
@@ -152,46 +154,46 @@ $pdf->addClient(strval($ThisTime));
 $pdf->addPageNumber("1/1");
 $pdf->SetFont('THSarabunNew','B', 16);
 $pdf->addClientAdresse(iconv('UTF-8','cp874', 'ชื่อผูู้ขอ: ' . $customer));
-//$pdf->addReglement("Chèque à réception de facture");
+//$pdf->addReglement('Code: '. substr(hash('sha3-512', $customer),0,8));
 //$pdf->addEcheance("03/12/2003");
-//$pdf->addNumTVA("FR888777666");
+
 $pdf->SetFont('THSarabunNew','B', 16);
 $cols=array(iconv('UTF-8','cp874','ที่')   => 23,
              iconv('UTF-8','cp874','รายการ')  => 78,
              iconv('UTF-8','cp874','จำนวน')     => 22,
              iconv('UTF-8','cp874','บาท/หน่วย')      => 26,
              iconv('UTF-8','cp874','เป็นเงิน') => 30,
-             iconv('UTF-8','cp874','สกุล')          => 11 );
+             iconv('UTF-8','cp874','หน่วย')          => 11 );
 $pdf->addCols( $cols);
 $cols=array( iconv('UTF-8','cp874','ที่')    => "C",
              iconv('UTF-8','cp874','รายการ')  => "L",
              iconv('UTF-8','cp874','จำนวน')     => "C",
              iconv('UTF-8','cp874','บาท/หน่วย')      => "R",
              iconv('UTF-8','cp874','เป็นเงิน') => "R",
-             iconv('UTF-8','cp874','สกุล')          => "C" );
+             iconv('UTF-8','cp874','หน่วย')          => "C" );
 $pdf->addLineFormat( $cols);
 $pdf->addLineFormat($cols);
 
 $y    = 109;
 $line = array( iconv('UTF-8','cp874','ที่')    => '1',
-               iconv('UTF-8','cp874','รายการ')  => iconv('UTF-8','cp874','สำเนาข้อมููลข่าวสารของราชการ') . "\n" .
+               iconv('UTF-8','cp874','รายการ')  => iconv('UTF-8','cp874','ค่าธรรมเนียมการจัดทำสำเนาข้อมููลข่าวสาร') . "\n" .
                                  "\n" .
                                  "",
                iconv('UTF-8','cp874','จำนวน')     => strval(number_format($copyPage)),
                iconv('UTF-8','cp874','บาท/หน่วย')      => strval(number_format($copyFee, 2)),  
                iconv('UTF-8','cp874','เป็นเงิน') => strval(number_format($totalCopyFee, 2)),
-               iconv('UTF-8','cp874','สกุล')          => iconv('UTF-8','cp874','฿') );
+               iconv('UTF-8','cp874','หน่วย')          => iconv('UTF-8','cp874','บาท') );
 $size = $pdf->addLine( $y, $line );
 $y   += $size + 2;
 
 $line = array( iconv('UTF-8','cp874','ที่')   => "2",
-               iconv('UTF-8','cp874','รายการ')  => iconv('UTF-8','cp874','คำรับรองสำเนา') . "\n" .
+               iconv('UTF-8','cp874','รายการ')  => iconv('UTF-8','cp874','ค่าธรรมเนียมการให้คำรับรองถููกต้อง') . "\n" .
                                  "\n" .
                                  "",
                iconv('UTF-8','cp874','จำนวน')     => strval(number_format($signNumber)),
                iconv('UTF-8','cp874','บาท/หน่วย')      => strval(number_format($signFee, 2)),
                iconv('UTF-8','cp874','เป็นเงิน') => strval(number_format($totalSignFee, 2)),
-               iconv('UTF-8','cp874','สกุล')          => iconv('UTF-8','cp874','฿') );
+               iconv('UTF-8','cp874','หน่วย')          => iconv('UTF-8','cp874','บาท') );
  
 $size = $pdf->addLine( $y, $line );
 
@@ -205,21 +207,21 @@ $line = array( iconv('UTF-8','cp874','ที่')   => iconv('UTF-8','cp874',' '
                iconv('UTF-8','cp874','จำนวน')     => " ",
                iconv('UTF-8','cp874','บาท/หน่วย')      => " ",
                iconv('UTF-8','cp874','เป็นเงิน') => strval(number_format($totalFee, 2)),
-               iconv('UTF-8','cp874','สกุล')          => iconv('UTF-8','cp874','฿') );
+               iconv('UTF-8','cp874','หน่วย')          => iconv('UTF-8','cp874','บาท') );
  
 $size = $pdf->addLine( $y, $line );
 
 $y   += $size + 2; 
 
-$timeNow = strval(time());
+
 
 $hash = 'c08fcfd8fac91ca096cc64f1a804400d63355fbda6fbed08cd69fc358c1bb09b86076ddd486556dc2d98812960b8272b27da41249d63735fe63032af4668661e';
 if(hash('sha3-512',$pin)==$hash){
 $pdf->SetY(-47);
 $pdf->Cell(0, 7, iconv('UTF-8','cp874','ศููนย์บริการร่วมกระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม'), 0, 0, 'C');
 $pdf->SetY(-37);
-$pdf->Cell(0, 0, 'e-INVOICE Reference Number: ' . $timeNow, 0, 0, 'C');
-$pdf->SetY(-30);
+//$pdf->Cell(0, 0, 'Service Link Center, Ministry of Natural Resources and Environment', 0, 0, 'C');
+$pdf->SetY(-37);
 $pdf->SetFont('THSarabunNew','', 12);
 $pdf->Cell(0, 0, iconv('UTF-8','cp874','ผูู้ออกใบแจ้งค่าธรรมเนียม ') . ': '  . iconv('UTF-8','cp874', $officer) . ' ' . iconv('UTF-8','cp874', $position) . iconv('UTF-8','cp874',' ศบร.ทส.'), 0, 0, 'C');
 $pdf->image('images/lineoa.png', 10,250,20,0,'', 'https://lin.ee/1ltKjol');
@@ -227,8 +229,8 @@ $pdf->SetY(-29);
 $pdf->SetFont('THSarabunNew','', 14);
 $pdf->Cell(0, 7, iconv('UTF-8','cp874','ส่งหลักฐานโอนเงิน'), 0, 0, 'L');
 $pdf->temporaire( "Approved" );
+$pdf->addNumTVA($timeNow);
 $pdf->Output();
-//$mpdf->Output($timeNow . '.pdf', \Mpdf\Output\Destination::FILE);
 $pdf->Output('F', 'einvoice/'. $timeNow. '.pdf');
 }
 else{
