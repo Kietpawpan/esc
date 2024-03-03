@@ -151,6 +151,17 @@
 </div>
 
 <br>
+<!HIDE PIN CODE>
+	<script type='text/javascript'>
+        	const togglePassword = document.querySelector("#togglePassword");
+	        const password = document.querySelector("#input");
+        	togglePassword.addEventListener("click", function () {
+	            const type = password.getAttribute("type") === "password" ? "text" : "password";
+        	    password.setAttribute("type", type);
+                    this.classList.toggle("bi-eye");
+	        });
+    	
+    	</script>
 
 
 </body>
