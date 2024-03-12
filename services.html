@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/chat.css">
+    <script src="js/chat.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/png" href="images/krut.png" />
+    <meta property="og:image:width" content="300">
+    <meta property="og:image:height" content="300">
+    <meta property="og:updated_time" content="1440432930" />
+
+<title>MNRE | e-Services</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#Question {
+  background-image: url('images/search.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#Answer {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#Answer li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; 
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#Answer li a:hover:not(.header) {
+  background-color: #eee;
+}
+</style>
+
+</head>
+
+<body onload="startFunction()">
+
+
+  <nav>
+
+        <div class="navbar">
+            <img class="dpimg" onclick="openFullScreenDP()" src="images/mnre.png" alt="">
+            <div class="personalInfo">
+                <label id="name">ศูนย์บริการร่วม ทส.</label>
+                <label id="lastseen"></label>
+            </div>
+        </div>
+
+    </nav>
+
+ <div class="scrollable" id="myScrollable">
+      <div id="chatting" class="chatting">
+
+<input type="text" id="Question" onkeyup="myFunction()" placeholder="พิมพ์ชื่อบริการที่ต้องการติดต่อ..." title="คำถามที่ท่านเลือกค่ะ">
+
+<ul id="Answer">
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+ <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="http://iwis.pcd.go.th/index.php">
+  ฐานข้อมูลคุณภาพน้ำแหล่งน้ำผิวดินทั่วประเทศ (IWIS) จากจุดตรวจวัดคุณภาพน้ำ จำนวน 635 จุด จาก 48 แม่น้ำ และ 4 แหล่งน้ำนิ่ง  มีข้อมูลคุณภาพน้ำ ระดับน้ำ อัตราการไหล ปริมาณฝน ปริมาณน้ำในเขื่อน และสถานะการณ์น้ำ กทม. จัดทำโดยกรมควบคุมมลพิษ
+  </a></li>
+  <li><a href="http://air4thai.pcd.go.th/webV3/#/Home">รายงานคุณภาพอากาศ (Air4Thai) ของกรมควบคุมมลพิษ</a></li>
+  <li><a href="http://noisemonitor.net/web/index.php">รายงานค่าระดับเสียงจากสถานีตรวจวัดระดับเสียงของกรมควบคุมมลพิษ</a></li>
+  <li><a href="https://thaimsw.pcd.go.th/index.php">สารสนเทศด้านการจัดการขยะมูลฝอยชุมชน</a></li>
+  <li><a href="https://ecap.pcd.go.th/ecap/home/defaulted">ช่องทางในการแจ้งเรื่องร้องเรียนด้านมลพิษ ในเขตพื้นที่กรุงเทพมหานคร สายด่วน 1650</a></li>
+  <li><a href="https://ecap.pcd.go.th/ecap/home/province">ช่องทางในการแจ้งเรื่องร้องเรียนด้านมลพิษ ในเขตพื้นที่ต่างจังหวัด สายด่วน 1650</a></li>
+  <li><a href="https://ecap.pcd.go.th/ecap/tracking/">ติดตามเรื่องร้องเรียนด้านมลพิษ</a></li> 
+  <li><a href="https://ecap.pcd.go.th/ecap/flow/">ขั้นตอนการปฏิบัติงานรับแจ้งรื่องร้องเรียนด้านมลพิษ</a></li>
+  <li><a href="https://esc.mnre.go.th/info">ยื่นคำขอข้อมูลข่าวสารของหน่วยงานในกระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม (e-Request)</a></li>
+  <li><a href="http://gp.pcd.go.th/all">รายการสินค้าและบริการที่เป็นมิตรต่อสิ่งแวดล้อม (Green Products and Services)</a></li>
+  <li><a href="https://greendigitallibrary.dcce.go.th/">ห้องสมุดสีเขียว (Green Digital Library)</a></li>
+  <li><a href="https://eia.onep.go.th/"> ศูนย์ข้อมูลการประเมินผลกระทบสิ่งแวดล้อม (Smart EIA)</a></li>
+<li><a href="https://nps.dnp.go.th/reservation.php">จองบ้านพักและค่ายพักในอุทยานแห่งชาติ </a></li>
+<li><a href="https://nps.dnp.go.th/reservation.php?option=area">จองพื้นที่กางเต็นท์ในอุทยานแห่งชาติ</a></li>
+<li><a href="https://nps.dnp.go.th/reservation.php?option=tent">จองเต็นท์ในอุทยานแห่งชาติ</a></li>
+<li><a href="https://nps.dnp.go.th/newsdetail.php?id=63&name=%E0%B8%84%E0%B8%B9%E0%B9%88%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%88%E0%B8%AD%E0%B8%87%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%9E%E0%B8%B1%E0%B8%81">คู่มือจองที่พักในอุทยานแห่งชาติ</a></li>
+<li><a href="https://etree.forest.go.th">ระบบจัดการป่าอย่างยั่งยืน (e-Tree)กรมป่าไม้</a></li>
+<li><a href="https://fp.forest.go.th/rfd_app/rfd_e_farms/app/index.php">ระบบทะเบียนสวนป่าออนไลน์ กรมป่าไม้</a></li>
+<li><a href="https://fp.forest.go.th/rfd_app/rfd_nursery/app/index.php">ขอกล้าไม้ ระบบแจกจ่ายกล้าไม้ กรมป่าไม้</a></li>
+<li><a href="https://fp.forest.go.th/rfd_app/rfd_e_permit/app/index.php">การขอต่ออายุใบอนุญาตอุตสาหกรรมไม้ผ่านระบบอิเล็กทรอนิกส์ ในเขตกรุงเทพมหานคร (e-Permit)</a></li>
+<li><a href="http://110.170.148.118/rfdportaltest/Home.aspx">ขอออกใบเบิกทาง ขอหนังสือกำกับ ขอใบรับรองไม้และใบอนุญาตส่งออก รวมทั้งขอตรวจพิสูจน์ไม้ และขอหนังสือรับรองแจ้งข้อเท็จจริงนำเข้าเลื่อยโซ่ยนต์ (RFD Single Window)</a></li>
+<li><a href="https://gis.dmr.go.th/DMR-GIS/">ระบบฐานข้อมลูภูมิสารสนเทศทรัพยากรธรณี ได้แก่ ธรณีวิทยา ซากดึกดำบรรพ์ ทรัพยากรแร่ ธรณีวิทยา สิ่งแวดล้อมและธรณีพิบัติภัย และอื่น ๆ </a></li>
+<li><a href="https://e-learning.dcce.go.th/lrs_deqp/home2">ระบบการเรียนรู้ออนไลน์ (e-Learning) กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม</a></li>
+<li><a href="https://www.dwr.go.th/projectrequest.php">ขอรับการสนับสนุนโครงการพัฒนาแหล่งน้ำ</a></li>
+<li><a href="http://smartgis.dgr.go.th/dgr_gis/map/">ระบบภูมิสารสนเทศเพื่อการบริหารจัดการทรัพยากรน้ำบาดาล</a></li>
+<li><a href="https://info.go.th">ศูนย์รวมข้อมูลเพื่อติดต่อราชการ</a></li>
+<li><a href="https://datum.dgr.go.th/mapgroundwater/">แผนที่น้ำบาดาล (รายจังหวัด)</a></li>
+<li><a href="https://www.dgr.go.th/th/newsAll/261/8303">คู่มือประชาชน กรมทรัพยากรน้ำบาดาล</a></li>
+<li><a href="https://ghgreduction.tgo.or.th/th/tver-step/tver-carbon-trading-procedure.html">ซื้อขายคาร์บอนเครดิต</a></li>
+ <li><a href="https://carbonmarket.tgo.or.th/index.php?lang=TH&mod=d2ViYm9hcmQ=&action=ZGV0YWls&param=MzE=">มีสวนป่าอยู่ 20 ไร่ จะขายคาร์บอนเคดิตได้ไหม ถ้าได้จะขายให้ใคร และติดต่อได้ทางไหน</a></li>
+  <li><a href="https://carbonmarket.tgo.or.th/index.php?lang=TH&mod=d2ViYm9hcmQ=&action=ZGV0YWls&param=Mjg=">ปลูกยางพาราพื้นที่ประมาณ 100 ไร่ อยากขายคาร์บอนเครดิต</a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+
+</ul>
+
+</div>
+</div>
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("Question");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("Answer");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+</body>
+</html>
