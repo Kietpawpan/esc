@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/chat.css">
+    <script src="js/chat.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/png" href="images/krut.png" />
+    <meta property="og:image:width" content="300">
+    <meta property="og:image:height" content="300">
+    <meta property="og:updated_time" content="1440432930" />
+
+<title>MNRE | e-mail</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#Question {
+  background-image: url('images/search.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#Answer {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#Answer li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; 
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#Answer li a:hover:not(.header) {
+  background-color: #eee;
+}
+</style>
+
+</head>
+
+<body onload="startFunction()">
+
+
+  <nav>
+
+        <div class="navbar">
+            <img class="dpimg" onclick="openFullScreenDP()" src="images/mnre.png" alt="">
+            <div class="personalInfo">
+                <label id="name">ศูนย์บริการร่วม ทส.</label>
+                <label id="lastseen"></label>
+            </div>
+        </div>
+
+    </nav>
+
+ <div class="scrollable" id="myScrollable">
+      <div id="chatting" class="chatting">
+
+<input type="text" id="Question" onkeyup="myFunction()" placeholder="พิมพ์ชื่อหน่วยงานที่ต้องการติดต่อ..." title="คำถามที่ท่านเลือกค่ะ">
+
+<ul id="Answer">
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+ <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+ <li><a href="https://slc.mnre.go.th">ศูนย์บริการร่วมกระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม 
+	<br>อีเมล servicelinkcenter@mnre.go.th 
+	<br>โทร. 0 2265 6223-5
+	<br>เว็บไซต์ https://slc.mnre.go.th</a></li>
+ <li><a href="https://krabi.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดกระบี่ 
+	<br>อีเมล saraban_krabi@mnre.go.th 
+	<br>โทร. 0 7561 1396
+	<br>เว็บไซต์ https://krabi.mnre.go.th</a></li>
+ <li><a href="https://kanchanaburi.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดกาญจนบุรี 
+	<br>อีเมล kanchanaburi.org@mnre.go.th
+	<br>โทร. 0 3451 4910
+	<br>เว็บไซต์ https://kanchanaburi.mnre.go.th</a></li>
+ <li><a href="https://kalasin.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดกาฬสินธุ์ 	
+	<br>อีเมล saraban_kalasin@mnre.go.th 
+	<br>โทร. 0 4381 1778
+	<br>เว็บไซต์ https://kalasin.mnre.go.th</a></li>
+ <li><a href="https://kamphaengphet.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดกำแพงเพชร 
+	<br>อีเมล kamphaengphet.org@mnre.go.th
+	<br>โทร. 0 5570 5034
+	<br>เว็บไซต์ https://kamphaengphet.mnre.go.th</a></li>
+ <li><a href="https://khonkaen.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดขอนแก่น 
+	<br>อีเมล saraban_khonkaen@mnre.go.th
+	<br>โทร. 0 4323 7971 
+	<br>เว็บไซต์ https://khonkaen.mnre.go.th</a></li>
+ <li><a href="https://chanthaburi.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดจันทบุรี
+	<br>อีเมล chantaburi.org@mnre.go.th
+	<br>โทร. 0 3931 3404
+	<br>เว็บไซต์ https://chanthaburi.mnre.go.th</a></li>
+ <li><a href="https://chachoengsao.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดฉะเชิงเทรา
+	<br>อีเมล saraban_chachoengsao@mnre.go.th
+	<br>โทร. 0 3808 8068
+	<br>เว็บไซต์ https://chachoengsao.mnre.go.th</a></li>
+ <li><a href="https://chonburi.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดชลบุรี
+	<br>อีเมล chonburi.org@mnre.go.th
+	<br>โทร. 0 3839 8268 
+	<br>เว็บไซต์ https://chonburi.mnre.go.th</a></li>
+ <li><a href="https://chainat.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดชัยนาท
+	<br>อีเมล chainat.org@mnre.go.th
+	<br>โทร. 0 5641 1013
+	<br>เว็บไซต์ https://chainat.mnre.go.th</a></li>
+ <li><a href="https://chaiyaphum.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดชัยภูมิ
+	<br>อีเมล saraban_chaiyaphum@mnre.go.th
+	<br>โทร. 0 4481 1466
+	<br>เว็บไซต์ https://chaiyaphum.mnre.go.th</a></li>
+ <li><a href="https://chumphon.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดชุมพร
+	<br>อีเมล saraban_chumphon@mnre.go.th
+	<br>โทร. 0 7751 2166
+	<br>เว็บไซต์ https://chumphon.mnre.go.th</a></li>
+ <li><a href="https://chiangrai.mnre.go.th/">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดเชียงราย
+	<br>อีเมล chiangrai.org@mnre.go.th
+	<br>โทร. 0 5360 0816
+	<br>เว็บไซต์ https://chiangrai.mnre.go.th</a></li>
+ <li><a href="https://chiangmai.mnre.go.th/">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดเชียงใหม่
+	<br>อีเมล saraban_chiangmai@mnre.go.th
+	<br>โทร. 0 5311 2725-6
+	<br>เว็บไซต์ https://chiangmai.mnre.go.th</a></li>
+ <li><a href="https://trang.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดตรัง
+	<br>อีเมล saraban_trang@mnre.go.th
+	<br>โทร. 0 7521 8983
+	<br>เว็บไซต์ https://trang.mnre.go.th</a></li>
+ <li><a href="https://trat.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดตราด
+	<br>อีเมล saraban_trt@mnre.go.th
+	<br>โทร. 0 3951 0907
+	<br>เว็บไซต์ https://trat.mnre.go.th</a></li>
+ <li><a href="https://www.mnre.go.th/tak/th/">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดตาก
+	<br>อีเมล tak.org@mnre.go.th
+	<br>โทร. 0 5551 2153
+	<br>เว็บไซต์ https://www.mnre.go.th/tak/th/</a></li>
+ <li><a href="https://nakhonnayok.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดนครนายก
+	<br>อีเมล saraban_nakhonnayok@mnre.go.th
+	<br>โทร. 0 3731 1776
+	<br>เว็บไซต์ https://nakhonnayok.mnre.go.th</a></li>
+ <li><a href="https://nakhonpathom.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดนครปฐม
+	<br>อีเมล nakhonpathom.org@mnre.go.th
+	<br>โทร. 0 3434 0025
+	<br>เว็บไซต์ https://nakhonpathom.mnre.go.th</a></li>
+ <li><a href="https://nakhonphanom.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดนครพนม
+	<br>อีเมล saraban_nakhonphanom@mnre.go.th
+	<br>โทร. 0 4251 1272
+	<br>เว็บไซต์ https://nakhonphanom.mnre.go.th</a></li>
+ <li><a href="https://nakhonratchasima.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดนครราชสีมา
+	<br>อีเมล koratnreo.org@mnre.go.th
+	<br>โทร. 0 4435 3886
+	<br>เว็บไซต์ https://nakhonratchasima.mnre.go.th</a></li>
+ <li><a href="https://nakhonsithammarat.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดนครศรีธรรมราช
+	<br>อีเมล nakhonsithammarat.org@mnre.go.th
+	<br>โทร. 0 7534 1010
+	<br>เว็บไซต์ https://nakhonsithammarat.mnre.go.th</a></li>
+ <li><a href="https://nakhonsawan.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดนครสวรรค์
+	<br>อีเมล nakhonsawan.org@mnre.go.th
+	<br>โทร. 0 5600 8058 
+	<br>เว็บไซต์ https://nakhonsawan.mnre.go.th</a></li>
+ <li><a href="https://nonthaburi.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดนนทบุรี
+	<br>อีเมล nonthaburi.org@mnre.go.th
+	<br>โทร. 0 2580 0727-8
+	<br>เว็บไซต์ https://nonthaburi.mnre.go.th</a></li>
+ <li><a href="https://narathiwat.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดนราธิวาส
+	<br>อีเมล mnrenara@gmail.com
+	<br>โทร. 0 7364 2651
+	<br>เว็บไซต์ https://narathiwat.mnre.go.th</a></li>
+ <li><a href="https://nan.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดน่าน
+	<br>อีเมล nan.org@mnre.go.th
+	<br>โทร. 0 5471 6456
+	<br>เว็บไซต์ https://nan.mnre.go.th</a></li>
+ <li><a href="https://buengkan.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดบึงกาฬ
+	<br>อีเมล sarabanBKmnre@gmail.com
+	<br>โทร. 0 4249 2498
+	<br>เว็บไซต์ https://buengkan.mnre.go.th</a></li>
+ <li><a href="https://buriram.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดบุรีรัมย์
+	<br>อีเมล saraban_buriram@mnre.go.th
+	<br>โทร. 0 4466 6553-4
+	<br>เว็บไซต์ https://buriram.mnre.go.th</a></li>
+ <li><a href="https://pathumthani.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดปทุมธานี
+	<br>อีเมล pathumthani.org@mnre.go.th
+	<br>โทร. 0 2581 6341
+	<br>เว็บไซต์ https://pathumthani.mnre.go.th</a></li>
+ <li><a href="https://pkk.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดประจวบคีรีขันธ์
+	<br>อีเมล prachuapkhirikhan.org@mnre.go.th
+	<br>โทร. 0 3260 2496
+	<br>เว็บไซต์ https://pkk.mnre.go.th</a></li>
+ <li><a href="https://prachinburi.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดปราจีนบุรี
+	<br>อีเมล prachinburi.org@mnre.go.th
+	<br>โทร. 0 3745 4326-7
+	<br>เว็บไซต์ https://prachinburi.mnre.go.th</a></li>
+ <li><a href="https://www.mnre.go.th/pattani">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดปัตตานี
+	<br>อีเมล saraban_pattani@mnre.go.th
+	<br>โทร. 0 7346 0073
+	<br>เว็บไซต์ https://www.mnre.go.th/pattani</a></li>
+<li><a href="https://www.mnre.go.th/ayutthaya">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดพระนครศรีอยุธยา
+	<br>อีเมล ayutthaya.org@mnre.go.th
+	<br>โทร.  0 3533 6356
+	<br>เว็บไซต์ https://www.mnre.go.th/ayutthaya</a></li>
+ <li><a href="https://phayao.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดพะเยา
+	<br>อีเมล phayao.org@mnre.go.th
+	<br>โทร. 0 5488 7112
+	<br>เว็บไซต์ https://phayao.mnre.go.th</a></li>
+ <li><a href="https://www.mnre.go.th/phangnga">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดพังงา
+	<br>อีเมล phangnga.org@mnre.go.th
+	<br>โทร. 0 7648 1033
+	<br>เว็บไซต์ https://www.mnre.go.th/phangnga</a></li>
+ <li><a href="https://phatthalung.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดพัทลุง
+	<br>อีเมล saraban_phatthalung@mnre.go.th
+	<br>โทร. 0 7484 0823
+	<br>เว็บไซต์ https://phatthalung.mnre.go.th</a></li>
+ <li><a href="https://phichit.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดพิจิตร
+	<br>อีเมล phichitmnre@hotmail.com
+	<br>โทร. 0 5611 1295
+	<br>เว็บไซต์ https://phichit.mnre.go.th</a></li>
+ <li><a href="https://phitsanulok.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดพิษณุโลก
+	<br>อีเมล phitsanulok.org@mnre.go.th
+	<br>โทร. 0 5532 2652
+	<br>เว็บไซต์ https://phitsanulok.mnre.go.th</a></li>
+ <li><a href="https://phetchaburi.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดเพชรบุรี
+	<br>อีเมล saraban_phetchaburi@mnre.go.th
+	<br>โทร. 0 3242 5028
+	<br>เว็บไซต์ https://phetchaburi.mnre.go.th</a></li>
+ <li><a href="https://phetchabun.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดเพชรบูรณ์
+	<br>อีเมล phetchabun.org@mnre.go.th
+	<br>โทร. 0 5672 9786
+	<br>เว็บไซต์ https://phetchabun.mnre.go.th</a></li>
+ <li><a href="https://www.mnre.go.th/phrae">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดแพร่
+	<br>อีเมล phrae.org@mnre.go.th
+	<br>โทร. 0 5451 1637
+	<br>เว็บไซต์ https://www.mnre.go.th/phrae</a></li>
+ <li><a href="https://phuket.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดภูเก็ต
+	<br>อีเมล saraban_phuket@mnre.go.th
+	<br>โทร. 0 7621 1067
+	<br>เว็บไซต์ https://phuket.mnre.go.th</a></li>
+ <li><a href="https://mahasarakham.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดมหาสารคาม
+	<br>อีเมล mahasarakham.org@mnre.go.th
+	<br>โทร.  0 4377 7900
+	<br>เว็บไซต์ https://mahasarakham.mnre.go.th</a></li>
+ <li><a href="https://mukdahan.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดมุกดาหาร
+	<br>อีเมล saraban_mukdahan@mnre.go.th
+	<br>โทร. 0 4261 4231
+	<br>เว็บไซต์ https://mukdahan.mnre.go.th</a></li>
+ <li><a href="https://maehongson.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดแม่ฮ่องสอน
+	<br>อีเมล maehongson@mnre.go.th
+	<br>โทร. 0 5369 5474
+	<br>เว็บไซต์ https://maehongson.mnre.go.th</a></li>
+ <li><a href="https://yasothon.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดยโสธร
+	<br>อีเมล saraban_yasothon@mnre.go.th
+	<br>โทร. 0 4571 5466
+	<br>เว็บไซต์ https://yasothon.mnre.go.th</a></li>
+ <li><a href="https://yala.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดยะลา
+	<br>อีเมล saraban_yala@mnre.go.th
+	<br>โทร. 0 7321 2787
+	<br>เว็บไซต์ https://yala.mnre.go.th</a></li>
+ <li><a href="https://roiet.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดร้อยเอ็ด
+	<br>อีเมล saraban_roiet@mnre.go.th
+	<br>โทร. 0 4351 1561
+	<br>เว็บไซต์ https://roiet.mnre.go.th</a></li>
+ <li><a href="https://ranong.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดระนอง
+	<br>อีเมล ranong.org@mnre.go.th
+	<br>โทร. 0 7782 4011
+	<br>เว็บไซต์ https://ranong.mnre.go.th</a></li>
+ <li><a href="https://rayong.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดระยอง
+	<br>อีเมล rayong.org@mnre.go.th
+	<br>โทร. 0 3861 1008
+	<br>เว็บไซต์ https://rayong.mnre.go.th</a></li>
+ <li><a href="https://ratchaburi.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดราชบุรี
+	<br>อีเมล saraban_ratchaburi@mnre.go.th
+	<br>โทร. 0 3233 7041
+	<br>เว็บไซต์ https://ratchaburi.mnre.go.th</a></li>
+ <li><a href="https://lopburi.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดลพบุรี
+	<br>อีเมล lopburi.org@mnre.go.th
+	<br>โทร. 0 3641 1060
+	<br>เว็บไซต์ https://lopburi.mnre.go.th</a></li>
+ <li><a href="https://lampang.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดลำปาง
+	<br>อีเมล lampang.mnre@gmail.com
+	<br>โทร. 0 5423 0550
+	<br>เว็บไซต์ https://lampang.mnre.go.th</a></li>
+ <li><a href="https://www.mnre.go.th/lamphun">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดลำพูน
+	<br>อีเมล saraban_lamphun@mnre.go.th
+	<br>โทร. 0 5351 0662
+	<br>เว็บไซต์ https://www.mnre.go.th/lamphun</a></li>
+ <li><a href="https://www.mnre.go.th/loei">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดเลย
+	<br>อีเมล saraban_loei@mnre.go.th
+	<br>โทร. 0 4281 1394
+	<br>เว็บไซต์ https://www.mnre.go.th/loei</a></li>
+ <li><a href="https://sisaket.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดศรีสะเกษ
+	<br>อีเมล saraban_sisaket@mnre.go.th
+	<br>โทร. 0 4561 1988
+	<br>เว็บไซต์ https://sisaket.mnre.go.th</a></li>
+ <li><a href="https://sakonnakhon.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดสกลนคร
+	<br>อีเมล sakonnakhon.org@mnre.go.th
+	<br>โทร. 0 4271 3432
+	<br>เว็บไซต์ https://sakonnakhon.mnre.go.th</a></li>
+ <li><a href="https://songkhla.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดสงขลา
+	<br>อีเมล songkhla.org@mnre.go.th
+	<br>โทร. 0 7431 1579
+	<br>เว็บไซต์ https://songkhla.mnre.go.th</a></li>
+ <li><a href="https://www.mnre.go.th/satun">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดสตูล
+	<br>อีเมล tsjsatun@gmail.com
+	<br>โทร. 0 7471 1039
+	<br>เว็บไซต์ https://www.mnre.go.th/satun</a></li>
+ <li><a href="https://www.mnre.go.th/samutprakan">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดสมุทรปราการ
+	<br>อีเมล saraban_samutprakan@mnre.go.th
+	<br>โทร. 0 2183 1050
+	<br>เว็บไซต์ https://www.mnre.go.th/samutprakan</a></li>
+ <li><a href="https://www.mnre.go.th/samutsongkhram">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดสมุทรสงคราม
+	<br>อีเมล  saraban_samutsongkhram@mnre.go.th
+	<br>โทร. 0 3471 3135
+	<br>เว็บไซต์ https://www.mnre.go.th/samutsongkhram</a></li>
+ <li><a href="https://samutsakhon.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดสมุทรสาคร
+	<br>อีเมล samutsakhon.org@mnre.go.th
+	<br>โทร. 0 3481 0300
+	<br>เว็บไซต์ https://samutsakhon.mnre.go.th</a></li>
+ <li><a href="https://sakaeo.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดสระแก้ว
+	<br>อีเมล saraban_sakaeo@mnre.go.th
+	<br>โทร. 0 3742 5400
+	<br>เว็บไซต์ https://sakaeo.mnre.go.th</a></li>
+ <li><a href="https://saraburi.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดสระบุรี
+	<br>อีเมล saraburi_1900@mnre.go.th
+	<br>โทร. 0 3634 0759
+	<br>เว็บไซต์ https://saraburi.mnre.go.th</a></li>
+ <li><a href="https://singburi.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดสิงห์บุรี
+	<br>อีเมล singburi.org@mnre.go.th
+	<br>โทร. 0 3651 1713
+	<br>เว็บไซต์ https://singburi.mnre.go.th</a></li>
+ <li><a href="https://sukhothai.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดสุโขทัย
+	<br>อีเมล saraban_sukhothai@mnre.go.th
+	<br>โทร. 0 5561 5663 
+	<br>เว็บไซต์ https://sukhothai.mnre.go.th</a></li>
+<li><a href="https://suphanburi.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดสุพรรณบุรี
+	<br>อีเมล saraban_suphanburi@mnre.go.th
+	<br>โทร. 0 3553 5426
+	<br>เว็บไซต์ https://suphanburi.mnre.go.th</a></li>
+<li><a href="https://suratthani.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดสุราษฏร์ธานี
+	<br>อีเมล suratthai.org@mnre.go.th 
+	<br>โทร. 0 7728 7573
+	<br>เว็บไซต์ https://suratthani.mnre.go.th</a></li>
+<li><a href="https://www.mnre.go.th/surin">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดสุรินทร์
+	<br>อีเมล surin.org@mnre.go.th
+	<br>โทร. 0 4455 8640
+	<br>เว็บไซต์ https://www.mnre.go.th/surin</a></li>
+<li><a href="https://nongkhai.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดหนองคาย
+	<br>อีเมล saraban_nongkhai@mnre.go.th
+	<br>โทร. 0 4242 3971
+	<br>เว็บไซต์ https://nongkhai.mnre.go.th</a></li>
+<li><a href="https://nongbualamphu.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดหนองบัวลำภู
+	<br>อีเมล nongbualamphu.org@mnre.go.th
+	<br>โทร.  0 4231 6707
+	<br>เว็บไซต์ https://nongbualamphu.mnre.go.th</a></li>
+<li><a href="https://angthong.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดอ่างทอง
+	<br>อีเมล saraban_angthong@mnre.go.th
+	<br>โทร. 0 3561 5995
+	<br>เว็บไซต์ https://angthong.mnre.go.th</a></li>
+<li><a href="https://amnatcharoen.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดอำนาจเจริญ
+	<br>อีเมล saraban_amnatcharoen@mnre.go.th
+	<br>โทร. 0 4552 3235-6
+	<br>เว็บไซต์ https://amnatcharoen.mnre.go.th</a></li>
+<li><a href="https://udonthani.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดอุดรธานี
+	<br>อีเมล udonthani.org@mnre.go.th
+	<br>โทร. 0 4221 2588
+	<br>เว็บไซต์ https://udonthani.mnre.go.th</a></li>
+<li><a href="https://uttaradit.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดอุตรดิตถ์
+	<br>อีเมล uttaradit.org@mnre.go.th
+	<br>โทร. 0 5541 1056
+	<br>เว็บไซต์ https://uttaradit.mnre.go.th</a></li>
+<li><a href="https://​www.mnre.go.th/uthaithani">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดอุทัยธานี
+	<br>อีเมล uthaithani.org@mnre.go.th
+	<br>โทร. 0 5651 3159
+	<br>เว็บไซต์ https://​www.mnre.go.th/uthaithani</a></li>
+<li><a href="https://ubonratchathani.mnre.go.th">สำนักงานทรัพยากรธรรมชาติและสิ่งแวดล้อมจังหวัดอุบลราชธานี
+	<br>อีเมล saraban_ ubonratchathani@mnre.go.th
+	<br>โทร. 0 4534 4642
+	<br>เว็บไซต์ https://ubonratchathani.mnre.go.th</a></li>
+<li><a href="https://cado.mnre.go.th/">กองกลาง สำนักงานปลัดกระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม
+	<br>อีเมล mnre0200@saraban.mail.go.th
+	<br>โทร. 0 2265 6167
+	<br>เว็บไซต์ https://cado.mnre.go.th 
+	</a></li>
+<li><a href="https://dfa.mnre.go.th/">กองการต่างประเทศ สำนักงานปลัดกระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม
+	<br>อีเมล oic.org@mnre.go.th
+	<br>โทร. 0 2265 6117
+	<br>เว็บไซต์ https://dfa.mnre.go.th/
+	</a></li>
+<li><a href="https://id.mnre.go.th">กองตรวจราชการ สำนักงานปลัดกระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม
+	<br>อีเมล petitionmnre@mnre.go.th
+	<br>โทร. 0 2276 5611
+	<br>เว็บไซต์ https://id.mnre.go.th
+	</a></li>
+<li><a href="https://oops.mnre.go.th">กองยุทธศาสตร์และแผนงาน สำนักงานปลัดกระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม
+	<br>อีเมล oops.admin@mnre.go.th
+	<br>โทร. 0 2265 6109
+	<br>เว็บไซต์ https://oops.mnre.go.th
+	</a></li>
+<li><a href="https://isdnre.mnre.go.th">สถาบันการพัฒนาทรัพยากรธรรมชาติและสิ่งแวดล้อมอย่างยั่งยืน สำนักงานปลัดกระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม
+	<br>อีเมล cict1@mnre.go.th
+	<br>โทร. 0 2278 8689
+	<br>เว็บไซต์ https://isdnre.mnre.go.th
+	</a></li>
+<li><a href="https://audit.mnre.go.th/th/index">กลุ่มตรวจสอบภายใน สำนักงานปลัดกระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม
+	<br>อีเมล miag.org@mnre.go.th
+	<br>โทร. 0 2278 8587-78
+	<br>เว็บไซต์ https://audit.mnre.go.th/th/index
+	</a></li>
+<li><a href="https://psdg.mnre.go.th">กลุ่มพัฒนาระบบบริหาร สำนักงานปลัดกระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม
+	<br>อีเมล mnre.psdg01@gmail.com
+	<br>โทร. 0 2278 8580
+	<br>เว็บไซต์ https://psdg.mnre.go.th
+	</a></li>
+<li><a href="https://anticor.mnre.go.th">ศูนย์ปฏิบัติการต่อต้านการทุจริต สำนักงานปลัดกระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม
+	<br>อีเมล anticor.corruption@mnre.go.th
+	<br>โทร. 0 2265 6312
+	<br>เว็บไซต์ https://anticor.mnre.go.th
+	</a></li>
+<li><a href="https://www.mnre.go.th">สำนักงานปลัดกระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม
+	<br>อีเมล mnre0200@saraban.mail.go.th
+	<br>โทร. 1310
+	<br>เว็บไซต์ https://www.mnre.go.th
+	</a></li>
+<li><a href="https://www.onep.go.th">สำนักงานโยบายและแผนทรัพยากรธรรมชาติและสิ่งแวดล้อม
+	<br>อีเมล saraban@onep.go.th
+	<br>โทร. 0 2265 6515 และ 0 2265 6653
+	<br>เว็บไซต์ https://www.onep.go.th
+	</a></li>
+<li><a href=" https://www.pcd.go.th">กรมควบคุมมลพิษ
+	<br>อีเมล saraban@pcd.go.th     
+	<br>โทร. 0 2298 2000
+	<br>เว็บไซต์  https://www.pcd.go.th
+	</a></li>
+<li><a href="https://www.dcce.go.th">กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม
+	<br>อีเมล saraban@dcce.mail.go.th
+	<br>โทร. 0 2278 8400-19
+	<br>เว็บไซต์ https://www.dcce.go.th
+	</a></li>
+<li><a href="https://portal.dnp.go.th">กรมอุทยานแห่งชาติ สัตว์ป่า และพันธุ์พืช
+	<br>อีเมล saraban@dnp.mail.go.th
+	<br>โทร. 0 2579 6666 ต่อ 1123 และ 1124
+	<br>เว็บไซต์ https://portal.dnp.go.th
+	</a></li>
+<li><a href="https://www.forest.go.th">กรมป่าไม้
+	<br>อีเมล sarabun@forest.go.th
+	<br>โทร. 0 2561 4292
+	<br>เว็บไซต์ https://www.forest.go.th
+	</a></li>
+<li><a href="https://www.dmcr.go.th">กรมทรัพยากรทางทะเลและชายฝั่ง	
+	<br>อีเมล saraban@dmcr.mail.go.th
+	<br>โทร. 0 2141 1246-7
+	<br>เว็บไซต์ https://www.dmcr.go.th
+	</a></li>
+<li><a href="https://www.dmr.go.th">กรมทรัพยากรธรณี
+	<br>อีเมล saraban@dmr.mail.go.th	
+	<br>โทร. 0 2621 9500
+	<br>เว็บไซต์ https://www.dmr.go.th
+	</a></li>
+<li><a href="https://www.dwr.go.th">กรมทรัพยากรน้ำ	
+	<br>อีเมล saraban@dwr.mail.go.th
+	<br>โทร. 0 2271 6000 และ 0 22716003
+	<br>เว็บไซต์ https://www.dwr.go.th
+	</a></li>
+<li><a href="https://www.dgr.go.th">กรมทรัพยากรน้ำบาดาล
+	<br>อีเมล saraban@dgr.mail.go.th	
+	<br>โทร. 0 2666 7056-8 และ 0 2666 7005
+	<br>เว็บไซต์ https://www.dgr.go.th	
+	</a></li>
+<li><a href="http://www.fio.co.th">องค์การอุตสาหกรรมป่าไม้
+	<br>อีเมล saraban@fio.co.th 	
+	<br>โทร. 0 2282 3243-7
+	<br>เว็บไซต์ http://www.fio.co.th
+	</a></li>
+<li><a href="https://www.zoothailand.org">องค์การสวนสัตว์แห่งประเทศไทย ในพระบรมราชูปภัมภ์
+	<br>อีเมล 	saraban@zoothailand.org
+	<br>โทร. 0 2163 4955
+	<br>เว็บไซต์ https://www.zoothailand.org
+	</a></li>
+<li><a href="http://www.qsbg.org">องค์การสวนพฤกษศาสตร์
+	<br>อีเมล 	document@qsbg.mail.go.th
+	<br>โทร. 0 5384 1234
+	<br>เว็บไซต์ http://www.qsbg.org
+	</a></li>
+<li><a href="https://www.tgo.or.th">องค์การบริหารจัดการก๊าซเรือนกระจก
+	<br>อีเมล 	saraban_tgo@tgo.or.th
+	<br>โทร. 0 2142 7466
+	<br>เว็บไซต์ https://www.tgo.or.th
+	</a></li>
+<li><a href="https://www.bedo.or.th">สำนักงานพัฒนาเศรษฐกิจจากฐานชีวภาพ
+	<br>อีเมล 	saraban@bedo.or.th
+	<br>โทร. 0 2141 7800
+	<br>เว็บไซต์ https://www.bedo.or.th
+	</a></li>
+  
+
+</ul>
+
+</div>
+</div>
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("Question");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("Answer");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+</body>
+</html>
