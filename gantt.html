@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+<title>MNRE | Plan</title>
+<head>
+
+    <base target="_top">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=yes;" />
+
+</head>
+  <body><br/>
+<pre class="mermaid" style="margin-top:10px">
+     gantt
+	title ไตรมาส 2/2567
+	tickInterval 1week
+  	weekday monday
+    	section พ.ค.
+		ประชุมกฐิน: done, milestone, a1, 2024-05-07, 1d
+		อบรม cyber security: done, milestone, a2, after a1, 1d
+		อบรม PDPA (มอบ จนท.): done, a3, after a2, 1d
+		เตรียมประชุม กขร.สป.ทส. ครั้งที่ 2/2567: active, a4, after a1, until a5
+		ตอบแบบสำรวจโครงการฝึกอบรม ชะอำ: active, crit, a10, 2024-05-13,7d
+		เตรียมความปลอดภัยไซเบอร์: active, a13, 2024-05-14, 15d	
+		ติดตามแก้ไขอีเมล เบอร์โทรใน Web App: active, a15, 2024-05-15, 15d
+		16 ประชุมเตรียมกิจกรรมเฉลิมพระเกียรติฯ (มอบคุณพิพัฒน์): m2, 2024-05-16, 3h
+		17 แนะนำให้ผู้ขอไปยื่นคำขอรอยเท้าไดโนเสาร์ต่อ ทธ.: crit, a12, 2024-05-17, 3h
+		17 ประชุม กขร.สป.ทส. ครั้งที่ 2/2567: crit, milestone, a5, 2024-05-17, 3h
+		20 ส่งแบบสำรวจโครงการฝึกอบรมชะอำ:crit, milestone, a11, 2024-05-20, 2h
+		21 ส่งข้อมูลโครงการเท่าเทียมระหว่างเพศ: crit, milestone, a14, 2024-05-21, 1d
+		24 อบรมทำแผน Cyber (มอบ จนท.): crit, milestone, m1, 2024-05-24, 1d
+		31 ต้อนรับผู้บริหารถวายพระพรฯ: milestone, a6, 2024-05-31, 2h
+
+	section มิ.ย.
+		1 เผยแพร่ Web App อีเมล: b1, 2024-06-01, 5d
+		15 กีฬา ทส.: milestone, a7, 2024-06-15, 1d
+		เตรียมบรรยาย e-Request: crit, a8, after a5, until a9
+		28 บรรยาย e-Request: crit, milestone, a9, 2024-06-28, 3h
+	</pre>
+
+
+<pre class="mermaid" style="margin-top:10px">
+     gantt
+	title ไตรมาส 3/2567
+	tickInterval 1week
+  	weekday monday
+	section ก.ค.
+	        2 ต่ออายุ SSL: crit, a11, 2024-07-02, 1d 
+		5-7 สัมมนากอง: a10, 2024-07-05, 3d
+	section พ.ย. 
+		ต้อนรับผู้บริหาร กฐิน: milestone, y1, 2024-11-01, 1h
+</pre>
+
+<pre class="mermaid" style="margin-top:10px">
+     gantt
+	title ไตรมาส 4/2567
+	tickInterval 1week
+  	weekday monday
+	
+</pre>
+
+<pre class="mermaid" style="margin-top:10px">
+     gantt
+	title ไตรมาส 1/2568
+	tickInterval 1week
+  	weekday monday
+	section ต.ค.
+		1 ขออนุมัติโครงการ e-Tracking Backend: crit, 168a1, 2024-07-05, 7d
+	section พ.ย. 
+		1 ต้อนรับผู้บริหาร กฐิน: milestone, y1, 2024-11-01, 1h
+</pre>  
+
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true });
+    </script>
+
+</body>
+
+  </body>
+</html>
