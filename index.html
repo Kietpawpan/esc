@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ESC</title>
+<meta charset="UTF-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kietpawpan.github.io/roman/js/roman.js"></script>
+
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+</head>
+<body class="w3-light-grey">
+
+
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32"> 
+  <h1><b>ESC.MNRE.GO.TH</b></h1>
+  <p>บริการอิเล็กทรอนิกส์ <span class="w3-tag">MNRE SLC</span> 
+  | <i class="fa fa-thumbs-o-up " onclick="location.href='credit.html'"> Credits</i> 
+  | <i class="fa fa-envelope-o " onclick="location.href='contact.php'"> Contact</i></p>
+
+  
+</header>
+
+<!-- Grid -->
+<div class="w3-row">
+
+<?php 
+
+function countFolder($dir){return (count(scandir($dir))-2);};
+$folder = "app/comment/comments/"; 
+$number = countFolder($folder);
+
+?>
+
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <img src="img/docs2.jpg" alt="e-Request" style="width:100%;">
+    <div class="w3-container">
+          <h3><b>e-Request</b></h3>
+		      <h5><span class="w3-opacity">ยื่นคำขอข้อมูลข่าวสาร</span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p></p>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          <p><button class="w3-button w3-padding-large w3-white w3-border"
+		  onclick="location.href='https://esc.mnre.go.th/loadingERequest.html'"
+		  ><b>ENTER »</b></button></p>
+        </div>
+        <div class="w3-col m4 w3-hide-small">
+          <p><span class="w3-padding-large w3-right" onclick="location.href='https://esc.mnre.go.th/app/comment/index.php'"><b>Comments</b> <span class="w3-tag"><?php echo $number; ?></span></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+  <img class="w3-opacity" src="img/paul-hanaoka-HbyYFFokvm0-unsplash.jpg" alt="Norway" style="width:100%">
+  
+    <div class="w3-container">
+      <h3><b>e-Tracking</b></h3>
+      <h5><span class="w3-opacity">ตรวจดูสถานะคำขอ</span></h5>
+    </div>
+    <div class="w3-container">
+      <p></p>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          <p><button class="w3-button w3-padding-large w3-white w3-border"
+		  onclick="location.href='https://esc.mnre.go.th/loadingETracking.html'"
+		  ><b>ENTER »</b></button></p>
+        </div>
+        <div class="w3-col m4 w3-hide-small">
+          <p><span class="w3-padding-large w3-right" onclick="location.href='https://esc.mnre.go.th/app/comment/index.php'"><b>Comments  </b> <span class="w3-badge"><?php echo $number; ?></span></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- END BLOG ENTRIES -->
+
+
+<!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+   <img src="https://kietpawpan.github.io/images/002.jpeg" alt="Norway" style="width:100%">
+    <div class="w3-container">
+      <h3><b>MNRE Emails</b></h3>
+	   <h5><span class="w3-opacity">ช่องทางอิเล็กทรอนิกส์ ติดต่อราชการ ทส.</span></h5>
+      <h5><span class="w3-opacity"></span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p></p>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          <p><button class="w3-button w3-padding-large w3-white w3-border"
+		  onclick="location.href='https://esc.mnre.go.th/emails.html'"
+		  ><b>ENTER »</b></button></p>
+        </div>
+        <div class="w3-col m4 w3-hide-small">
+          <p><span class="w3-padding-large w3-right" onclick="location.href='https://esc.mnre.go.th/app/comment/index.php'"><b>Comments  </b> <span class="w3-badge"><?php echo $number; ?></span></span></p>
+		  
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- END BLOG ENTRIES -->
+
+<!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+   <img src="img/padlock.jpg" alt="Norway" style="width:100%">
+    <div class="w3-container">
+      <h3><b>Rights of the Data Subject</b></h3>
+	   <h5><span class="w3-opacity">ใช้สิทธิตามกฎหมายว่าด้วยการคุ้มครองข้อมูลส่วนบุคคล</span></h5>
+      <h5><span class="w3-opacity"></span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p></p>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          <p><button class="w3-button w3-padding-large w3-white w3-border"
+		  onclick="location.href='https://esc.mnre.go.th/loadingRights.html'"
+		  ><b>ENTER »</b></button></p>
+        </div>
+        <div class="w3-col m4 w3-hide-small">
+          <p><span class="w3-padding-large w3-right" onclick="location.href='https://esc.mnre.go.th/app/comment/index.php'"><b>Comments  </b> <span class="w3-badge"><?php echo $number; ?></span></span></p>	  
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- END BLOG ENTRIES -->
+
+<!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+   <img src="img/deskphone.jpg" alt="Norway" style="width:100%">
+    <div class="w3-container">
+      <h3><b>Data Breach Notification</b></h3>
+	   <h5><span class="w3-opacity">แจ้งเหตุรั่วไหลของข้อมูลส่วนบุคคล</span></h5>
+      <h5><span class="w3-opacity"></span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p></p>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          <p><button class="w3-button w3-padding-large w3-white w3-border"
+		  onclick="location.href='https://esc.mnre.go.th/loadingLeak.html'"
+		  ><b>ENTER »</b></button></p>
+        </div>
+        <div class="w3-col m4 w3-hide-small">
+          <p><span class="w3-padding-large w3-right" onclick="location.href='https://esc.mnre.go.th/app/comment/index.php'"><b>Comments  </b> <span class="w3-badge"><?php echo $number; ?></span></span></p>
+		  
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- END BLOG ENTRIES -->
+
+<!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <div class="w3-container"><br>
+ <h3><b>RGTS Thai Romanization</b></h3>
+ 	   <h5><span class="w3-opacity">ถอดอักษร (ไทย-โรมัน) ตามประกาศสำนักนายกรัฐมนตรีฯ </span><i style='color:red' class="fa fa-file-pdf-o" onclick="location.href='pdf/roman.pdf'"></i></h5>
+	<input style="width:100%" class="w3-border w3-padding" ID="thaiName" placeholder="ตัว-อย่าง">
+	 <input id="romanize" style="width:100%;margin-top:5px;border-width:0px;" placeholder="">
+      <h3><b></b></h3>
+      <h5><span class="w3-opacity"></span></h5>
+    </div>
+	
+  <div class="w3-container">
+      <p></p>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          <p><button class="w3-button w3-padding-large w3-white w3-border"
+		  onclick="romanize()"
+		  ><b>ROMANIZE</b></button>
+		  
+		  <button class="w3-button w3-padding-large w3-white w3-border"
+		  onclick="copy()"
+		  ><b>COPY</b></button>
+		  
+		  <button class="w3-button w3-padding-large w3-white w3-border"
+		  onclick="clearText()"
+		  ><b>CLEAR</b></button>		  
+		  </p>
+        </div>
+        <div class="w3-col m4 w3-hide-small">
+          <p><span class="w3-padding-large w3-right" onclick="location.href='https://esc.mnre.go.th/app/comment/index.php'"><b>Comments  </b> <span class="w3-badge"><?php echo $number; ?></span></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+<!-- END BLOG ENTRIES -->
+
+</div>
+
+<!-- Introduction menu -->
+<div class="w3-col l4">
+  <!-- About Card -->
+  <div class="w3-card w3-margin w3-margin-top"><p align="center">
+  <img class="w3-animate-fading" src="https://esc.mnre.go.th/info/img/mnre.png" style="width:50%"></p>
+    <div class="w3-container w3-white">
+      <h4><b>MNRE SLC</b></h4>
+      <p onclick="location.href='timeline.php'">โครงการพัฒนาบริการอิเล็กทรอนิกส์ของศูนย์บริการร่วมกระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม</p>
+    </div>
+  </div><hr>
+  
+  <!-- Posts -->
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4>Backend</h4>
+    </div>
+    <ul class="w3-ul w3-hoverable w3-white">
+
+      <li class="w3-padding-16" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfU4KG56TcHaejRK2qfSjjYBJxs6c8RZ1smCYRzpel1pJyHaw/viewform')">
+        <img src="img/doc0.jpg" alt="Image" class="w3-left w3-margin-right" style="width:80px">
+        <span class="w3-large">infoX 23</span><br>
+        <span>AI ช่วยเปิดเผยข้อมูล</span>
+      </li>  
+
+      <li class="w3-padding-16 w3-hide-medium w3-hide-small" onclick="location.href='https://esc.mnre.go.th/app/shorturl/index.php'">
+        <img src="img/philipp-katzenberger-iIJrUoeRoCQ-unsplash.jpg" alt="Image" class="w3-left w3-margin-right" style="width:80px;height:40px;">
+        <span class="w3-large">short URLs</span><br>
+        <span>จัดทำลิงค์สั้นราชการ</span>
+      </li>  
+
+   <li class="w3-padding-16 w3-hide-medium w3-hide-small" onclick="location.href='https://lookerstudio.google.com/reporting/7fcd651d-2c50-4b21-96a7-848d0e494f95/page/CgsWC'">
+        <img src="img/deskphone.jpg" alt="Image" class="w3-left w3-margin-right" style="width:80px;height:40px;">
+        <span class="w3-large">Call Report</span><br>
+        <span>สถิติการใช้บริการโทรศัพท์ ทส.</span>
+      </li> 
+ 
+  <li class="w3-padding-16" onclick="alert('จะเปิดให้บริการปลายปี พ.ศ. 2568')">
+        <img src="img/paul-hanaoka-HbyYFFokvm0-unsplash.jpg" alt="Image" class="w3-left w3-margin-right" style="width:80px">
+        <span class="w3-large">e-Tracking Backend</span><br>
+        <span>ปรับปรุงสถานะคำขอ</span>
+      </li> 
+    </ul>
+  </div>
+  <hr> 
+ 
+  <!-- Labels / tags -->
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4>e-Services</h4>
+    </div>
+    <div class="w3-container w3-white">
+    <p><span class="w3-tag w3-black w3-margin-bottom"><a href="info">e-Request</a></span>
+	<span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="app/e-tracking/">e-Tracking</a></span> 
+	<span class="w3-tag w3-light-grey w3-small w3-margin-bottom" onclick="alert('Coming in 2568')">e-Tracking Backend</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom" onclick="alert('Coming in 2569')">e-invoice</span> 
+	  <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="app/shorturl/">Short URLs</a></span> 
+  	  <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"><a href="https://lin.ee/1ItKjol">LINE OA Chatbot</a></span>
+    </p>
+    </div>
+  </div>
+  
+<!-- END Introduction Menu -->
+</div>
+
+<!-- END GRID -->
+</div><br>
+
+<!-- END w3-content -->
+</div>
+<center>Copyright &copy; <?php if(date("Y")>=2025){echo "2024 - " . date("Y");}else{echo date("Y ");} ?>MNRE Service Link Center All rights reserved.<br><a style="text-decoration:none" href="terms.html">เงื่อนไขบริการ</a> | <i class="fa fa-external-link " onclick="location.href='https://www.mnre.go.th/th/policy/content/1049'"> นโยบายความเป็นส่วนตัว</i>
+
+
+</center>
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+  <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
+  <button class="w3-button w3-black w3-padding-large w3-margin-bottom" onclick="alert('Coming soon. Thank you.')">Next »</button>
+</footer>
+</body>
+</html>
