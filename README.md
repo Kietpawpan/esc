@@ -6,7 +6,7 @@ Based on Thailand’s population, the country was estimated to emit around 2,887
 
 __Kaeokla for You__ is a carbon emision reduction and CO<sub>2</sub> reduction project by Zoological Park Organization of Thailand (ZPOT). The positive impact on carbon reduction from the project can be evaluated using CO<sub>2</sub> Evaluator, a web app for evaluating the potential atmospheric carbon reduction and the potential carbon emission reduction due to plastic-cup resue for seeding. The app has been deployed at https://esc.mnre.go.th/app/co2/
 
-The outcomes of the Kaeokla for You Project, in my view, are displayed below.
+The outcomes of the Kaeokla for You Project can be displayed as follows:
 
 ```mermaid
 flowchart LR
