@@ -24,4 +24,4 @@ Hence, we have both carbon emission reduction and carbon sequestration in one pr
 > [!NOTE]
 > CER = number of burned plastic cups * emission factor of plastic cup
 > 
-> I assume that all used plastic cups were subject to burning, and the emission factor of every plastic cups equal 3.54 kgCo2eq/kg.  
+> I assume that all used plastic cups were subject to burning, and the emission factors of every plastic cups equal 3.54 kgCo2eq/kg.  
