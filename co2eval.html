@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,9 +22,11 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <!-- Header -->
 <header class="w3-container w3-center w3-padding-32"> 
   <h1><b>ESC.MNRE.GO.TH</b></h1>
-  <p>บริการอิเล็กทรอนิกส์ <span class="w3-tag">MNRE SLC</span> 
-  | <i class="fa fa-thumbs-o-up " onclick="location.href='credit.html'"> Credits</i> 
-  | <i class="fa fa-envelope-o " onclick="location.href='contact.php'"> Contact</i></p>
+   <p>
+   <i class="fa fa-home" style="font-size:20px;" onclick="location.href='https://esc.mnre.go.th'"></i> 
+   บริการอิเล็กทรอนิกส์ <span class="w3-tag">MNRE SLC</span> 
+  | <i class="fa fa-thumbs-o-up " onclick="location.href='https://esc.mnre.go.th/credit.html'"> Credits</i> 
+  | <i class="fa fa-envelope-o " onclick="location.href='https://esc.mnre.go.th/contact.php'"> Contact</i></p>
 
 <style>
 .myapp{
@@ -53,34 +54,34 @@ font-family:"Kanit";
       <h3 style="background-color:green;color:white;text-align:center;margin-top:0px;"><b>CO<sub>2</sub> Evaluator
 		</b>
       </h3>
-      <h5><span class="w3-opacity">แบบประะเมินการดูดกลับและลดก๊าซ CO<sub>2</sub> จากโครงการแก้วกล้าเพื่อเธอ (Kaeokla for You)</span><br><br>
+      <h5><span class="w3-opacity">โปรแกรมคำนวณอัตราการดูดกลับและลด CO<sub>2</sub> กรณีรวบรวมแก้วพลาสติกไปเพาะกล้าไม้ เพื่อปลูกป่า เช่น โครงการแก้วกล้าเพื่อเธอ (Kaeokla for You) ขององค์การสวนสัตว์แห่งประเทศไทย ในพระบรมราชูปถัมภ์ ร่วมกับสำนักงานปลัดกระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม กรมป่าไม้ กรมการเปลี่ยนแปลงสภาพภูมิอากาศและสิ่งแวดล้อม กรมทรัพยากรน้ำ และเมืองพัทยา</span><br><br>
 
-<div class="myapp">จำนวนแก้วที่ใช้เพาะกล้าไม้ต่อเดือน<br>
+<div class="myapp">จำนวนแก้วต่อเดือน ที่จะนำไปเพาะกล้าไม้<br>
 <input id="cup" placeholder="100"><br><br>
 
-<div class="myapp">จำนวนแก้วที่ใช้เพาะกล้าไม้<br>
+<div class="myapp">การปลูกป่า<br>
 <select id="tree">
-<option value="">เลือกชนิดไม้<option>
-<option value="sak">สัก<option>
-<option value="yuka">ยูคาลิปตัส<option>
-<option value="thepha">กระถินเทพา<option>
-<option value="narong">กระถินณรงค์<option>
-<option value="yak">กระถินยักษ์<option>
+<option value="">เลือกชนิดพรรณไม้</option>
+<option value="sak">สัก</option>
+<option value="yuka">ยูคาลิปตัส</option>
+<option value="thepha">กระถินเทพา</option>
+<option value="narong">กระถินณรงค์</option>
+<option value="yak">กระถินยักษ์</option>
 </select>
 <br><br>
 
-<div class="myapp">ใช้ปลูกแก้วละกี่ต้น<br>
-<input id="treePerCup" placeholder="1"><br><br>
+<div class="myapp">ใช้กล้าไม้ แก้วละกี่ต้น<br>
+<input id="treePerCup" placeholder="1"><br>
 
-<div class="myapp">ปลูกกี่ต้นต่อไร่<br>
-<input id="treePerRai" placeholder="200"><br><br>
+<div class="myapp">*จะนำกล้าไม้ไปปลูกป่าต่อไป (200 ต้นต่อไร่)<br>
+<input id="treePerRai" placeholder="200" value=200 disabled hidden><br>
 
 <div class="myapp">ความเหมาะสมของพื้นที่เพาะปลูก<br>
 <select id="area">
-	<option value="">เลือกความเหมาะสม<option>
-	<option value="much">มาก<option>
-	<option value="moderate">ปานกลาง<option>
-	<option value="less">น้อย<option>
+	<option value="">เลือกความเหมาะสม</option>
+	<option value="much">มาก</option>
+	<option value="moderate">ปานกลาง</option>
+	<option value="less">น้อย</option>
 </select>
 <br><br>
 
@@ -103,7 +104,7 @@ font-family:"Kanit";
 <div id="output" class="myapp"></div>
 <br><br>
 <div class="myapp" style="color:blue">
-<b>เงือนไขที่ใช้คำนวณ</b><br>
+<b>เงื่อนไข</b><br>
 - แก้วพลาสติก 1 ใบ มีน้ำหนัก 0.015 kg<br>
 - การเผาแก้วพลาสติก มี Emission Factor เท่ากับ 3.54 kgCo<sub>2</sub>eq/kg (Kittithammavong <i>et al</i>., 2023)<br>
 - การกักเก็บคาร์บอน (Carbon sequestration) เป็นไปตามผลการศึกษาขององค์การบริหารจัดการก๊าซเรือนกระจก (2559)
@@ -185,9 +186,19 @@ else{cr=0;}
 
 var weightOfCup = 0.015;
 var emissionFactor = 3.54;
-var result = cup * 12 * treePerCup / treePerRai * survival/100 * cr;
-var reduction = cup * 12 * weightOfCup * emissionFactor/1000;
-var report = "ดูดกลับคาร์บอนไดออกไซด์ " + result.toFixed(4) + " ตันคาร์บอนไดออกไซด์เทียบเท่า/ไร่/ปี และลดการปลดปล่อย " + reduction.toFixed(4) + " ตันคาร์บอนไดออกไซด์เทียบเท่า/ปี";
+var result0 = cup * 12 * treePerCup * survival/100 * 1/ treePerRai  * cr;
+var result = result0.toLocaleString(undefined, {
+  minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+	});
+	
+var reduction0 = cup * 12 * weightOfCup * emissionFactor/1000;
+var reduction = reduction0.toLocaleString(undefined, {
+  minimumFractionDigits: 4,
+    maximumFractionDigits: 4
+	});
+	
+var report = "ดูดกลับคาร์บอนไดออกไซด์ " + result + " ตันคาร์บอนไดออกไซด์เทียบเท่า/ไร่/ปี และลดการปลดปล่อย " + reduction + " ตันคาร์บอนไดออกไซด์เทียบเท่า/ปี";
 if(cup==""){alert("โปรดกรอกจำนวนแก้วพลาสติก");}
 else if(tree==""){alert("โปรดเลือกชนิดไม้");}
 else if(treePerCup==""){alert("โปรดกรอกจำนวนต้นต่อแก้ว");}
@@ -197,6 +208,7 @@ else if(survival==""){alert("โปรดกรอกร้อยละของ
 else{alert(report);
 		document.getElementById("output").innerHTML="<textarea id='output2' style='width:100%;font-size:22px;'></textarea><br><div style='font-size:22px'><i class='fa fa-clone' onclick='copyText()'></i></div>";
 		document.getElementById("output2").value = report;
+		setHeight();
 }
 }
 
@@ -209,7 +221,9 @@ function copyText() {
    element.setSelectionRange(0, 0);
 }
 
-
+function setHeight(){
+	document.getElementById('output2').style.height = document.getElementById('output2').scrollHeight + 'px';
+}
 
 </script>
 </body>
