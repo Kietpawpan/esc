@@ -18,3 +18,8 @@ flowchart LR
     D-->|no| H[burning]
     H-->I[carbon emission]
 ```
+Hence, we have both carbon emission reduction and carbon sequestration in one project.
+
+## carbon emission reduction (CER)
+> [!NOTE]
+> CER = number of burned plastic cups * emission factor of plastic cup 
