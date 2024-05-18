@@ -18,11 +18,11 @@ flowchart LR
     D-->|no| H[burning]
     H-->I[carbon emission]
 ```
-Considering both carbon emission reduction and carbon sequestration in one project, we have:
+Considering both carbon emission reduction and carbon sequestration, we have:
 
 ## Carbon Emission Reduction (CER)
 > [!NOTE]
-> CER = C * w * EF 
+> CER = C * w * EF u
 
 where,
 - CER is carbon emision reduction (tonCo2eq)
