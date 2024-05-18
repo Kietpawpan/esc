@@ -67,4 +67,4 @@ See TGO (2559, [PDF](https://esc.mnre.go.th/app/co2/Tree_version02.pdf)) for mor
 ## Hypotheses
 1. Plastic cups are 15 g each.
 2. All the plastic cups are subject to open burning.
-3. Carbon reduction is equal to carbon sequestration.
+3. Carbon reduction is equivalent to carbon sequestration.
