@@ -9,7 +9,7 @@ Activities in Kaeokla for You Project can be displayed as follow:
 ```mermaid
 flowchart TD
     A[Used plastic cups] -->C[Daily Wasted by Participants]
-    C -->D{Collected in Animal-like fantacy bins?}
+    C -->D{Collected in fantacy bins?}
     D-->|yes| E[Reuse for Seeding]
     E -->F[Plantation]
     F-->G[Carbon reduction]
