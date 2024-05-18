@@ -7,4 +7,6 @@ __Kaeokla for You__ is a carbon emision reduction and CO2 reduction project run 
 Activities in Kaeokla for You Project can be displayed as follow:
 
 ```mermaid
+flowchart DT
+A-->B
 ```
