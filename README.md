@@ -23,4 +23,5 @@ Hence, we have both carbon emission reduction and carbon sequestration in one pr
 ## carbon emission reduction (CER)
 > [!NOTE]
 > CER = C * EF 
-> where, C = the number of burned plastic cups; EF = the average emission factor from plastic cup burning (3.54 kgCo2eq/kg).  
+
+where, C = the number of burned plastic cups; EF = the average emission factor from plastic cup burning (3.54 kgCo2eq/kg).  
