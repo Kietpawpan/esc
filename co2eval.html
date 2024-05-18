@@ -194,9 +194,22 @@ else if(treePerCup==""){alert("โปรดกรอกจำนวนต้น�
 else if(treePerRai==""){alert("โปรดกรอกจำนวนต้นต่อไร่");}
 else if(area==""){alert("โปรดเลือกความเหมาะสมของพื้นที่เพาะปลูก");}
 else if(survival==""){alert("โปรดกรอกร้อยละของอัตรารอด");}
-else{alert(report);document.getElementById("output").innerHTML=report;}
-
+else{alert(report);
+		document.getElementById("output").innerHTML="<textarea id='output2' style='width:100%;font-size:22px;'></textarea><br><div style='font-size:22px'><i class='fa fa-clone' onclick='copyText()'></i></div>";
+		document.getElementById("output2").value = report;
 }
+}
+
+function copyText() {
+  const element = document.querySelector('#output2');
+  element.select();
+  element.setSelectionRange(0, 99999);
+  document.execCommand('copy');
+  window.alert("copied!");
+   element.setSelectionRange(0, 0);
+}
+
+
 
 </script>
 </body>
