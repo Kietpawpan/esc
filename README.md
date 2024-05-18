@@ -2,7 +2,7 @@
 _A Case Study on ZPOT Kaeokla for You Project_
 
 ## Background
-__Kaeokla for You__ is a carbon emision reduction and CO<sub>2</sub> reduction project run by Zoological Park Organization of Thailand (ZPOT), a governmental agency under the Ministry of Natural Resources and Environmnet. The project was initiated by Yada Kaeosod. She consulted me on how to evaluate the positive impact on carbon reduction of the project: carbon emission reduction and carbon sequestration.
+__Kaeokla for You__ is a carbon emision reduction and CO<sub>2</sub> reduction project run by Zoological Park Organization of Thailand (ZPOT), the Ministry of Natural Resources and Environmnet. The project was initiated by Yada Kaeosod. She consulted me on how to evaluate the positive impact on carbon reduction of the project: carbon emission reduction and carbon sequestration.
 
 The outcome of the Kaeokla for You Project, in my view, are displayed below.
 
