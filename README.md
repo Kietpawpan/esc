@@ -24,21 +24,21 @@ Considering both carbon emission reduction and carbon sequestration, we have:
 > _CER = c * w * e_    
 
 where,
-- _CER_ is carbon emision reduction (tonCo2eq)
+- _CER_ is carbon emision reduction (tonCO<sub>2</sub>eq)
 - _c_ is the number of burned plastic cups (cups)
 - _w_ is the weight of one plastic cup (0.015 kg) 
-- _e_ is the average emission factor from plastic cup burning (3.54 kgCo2eq/kg).
+- _e_ is the average emission factor from plastic cup burning (3.54 kgCO<sub>2</sub>eq/kg).
 
 ## Carbon Reduction (CR)
 > _CR = n * m * t * 1/d * s_
 
 where,
-- _CR_ is carbon reduction due to sequestration (tonCo<sub>2</sub>eq/year)
+- _CR_ is carbon reduction due to sequestration (tonCO<sub>2</sub>eq/year)
 - _n_ is the number plastic cups collected (cups/month)
 - _m_ is the number of months per year (12 months/year)
 - _t_ is the number of plant seed per cup (seed/cup) 
 - _d_ is the plantation density (200 trees/Rai)
-- _s_ is carbon reduction rate due to sequestration (tonCo<sub>2</sub>eq/Rai/year), which depends on tree species and the suitability of the plantation geographic locations, expressed in JavaScript as follows:
+- _s_ is carbon reduction rate due to sequestration (tonCO<sub>2</sub>eq/Rai/year), which depends on tree species and the suitability of the plantation geographic locations, expressed in JavaScript as follows:
   
 ```
 var cr = "";
