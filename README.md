@@ -62,4 +62,4 @@ else if(tree=="yak" && area=="less"){cr=0.77;}
 
 else{cr=0;}
 ```
-__Source__: Modified from TGO (2559, [PDF](https://esc.mnre.go.th/app/co2/Tree_version02.pdf))
+See TGO (2559, [PDF](https://esc.mnre.go.th/app/co2/Tree_version02.pdf)) for more information.
