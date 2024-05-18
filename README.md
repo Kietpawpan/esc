@@ -40,4 +40,5 @@ where,
 - 12 is the number of months per year
 - T is the number of plant seed per cup (seed/cup) 
 - d is the plantation density (200 trees/Rai)
-- s is sequestration rate for each tree species, depending on the suitable of the land  
+- s is sequestration rate for each tree species, depending on the suitable of the land:
+  
