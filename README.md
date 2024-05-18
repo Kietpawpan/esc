@@ -11,8 +11,10 @@ flowchart LR
     A[Used plastic cups] -->C[Wasted]
     C -->D{Reused?}
     D-->|yes| E[Reuse for Seeding]
+    D-->|yes| J[No burning]
+    J-->K[carbon emission reduction]
     E -->F[Plantation]
-    F-->G[Carbon reduction]
+    F-->G[Carbon sequestration]
     D-->|no| H[burning]
     H-->I[carbon emission]
 ```
