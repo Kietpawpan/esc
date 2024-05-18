@@ -21,7 +21,6 @@ flowchart LR
 Considering both carbon emission reduction and carbon sequestration, we have:
 
 ## Carbon Emission Reduction (CER)
-> [!NOTE]
 > CER = C * w * EF u
 
 where,
@@ -31,7 +30,6 @@ where,
 - EF is the average emission factor from plastic cup burning (3.54 kgCo2eq/kg).
 
 ## Carbon Sequestration(CS)
-> [!NOTE]
 > CS = N * 12 * T * 1/d * s 
 
 where,
