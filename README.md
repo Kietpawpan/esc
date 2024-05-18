@@ -2,7 +2,7 @@
 _A Case Study on ZPOT Kaeokla for You Project_
 
 ## Background
-__Kaeokla for You__ is a carbon emision reduction and CO<sub>2</sub> reduction project run by Zoological Park Organization of Thailand (ZPOT), the Ministry of Natural Resources and Environmnet. I was consulted on how to evaluate the positive impact on carbon reduction from the project. Therefore, I built a web app for evaluating the potential atmospheric carbon absorption and the potential carbon emission reduction due to the project, deployed at https://esc.mnre.go.th/app/co2/
+__Kaeokla for You__ is a carbon emision reduction and CO<sub>2</sub> reduction project run by Zoological Park Organization of Thailand (ZPOT), the Ministry of Natural Resources and Environmnet. I was consulted on how to evaluate the positive impact on carbon reduction from the project. Therefore, I built a web app for evaluating the potential atmospheric carbon reduction and the potential carbon emission reduction due to the project, deployed at https://esc.mnre.go.th/app/co2/
 
 The outcome of the Kaeokla for You Project, in my view, are displayed below.
 
@@ -38,7 +38,7 @@ where,
 - _m_ is the number of months per year (12 months/year)
 - _t_ is the number of plant seed per cup (seed/cup) 
 - _d_ is the plantation density (200 trees/Rai)
-- _s_ is sequestration rate (tonCo<sub>2</sub>eq/Rai/year), depending on tree species and the suitable of the crop land, expressed in JavaScript as follows:
+- _s_ is carbon reduction rate due to sequestration (tonCo<sub>2</sub>eq/Rai/year), which depends on tree species and the suitability of the plantation geographic locations, expressed in JavaScript as follows:
   
 ```
 var cr = "";
@@ -63,3 +63,13 @@ else if(tree=="yak" && area=="less"){cr=0.77;}
 else{cr=0;}
 ```
 See TGO (2559, [PDF](https://esc.mnre.go.th/app/co2/Tree_version02.pdf)) for more information.
+
+## Hypotheses
+1. Plastic cups are 15 g each.
+2. All the plastic cups are subject to open burning.
+3. Carbon reduction is equal to carbon sequestration.
+
+Monte Kietpawpan, Ph.D.
+Director, Service Link Center,
+Ministry of Natural Resources and Environment 
+
