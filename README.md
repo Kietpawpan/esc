@@ -29,16 +29,16 @@ where,
 - _w_ is the weight of one plastic cup (0.015 kg) 
 - _e_ is the average emission factor from plastic cup burning (3.54 kgCo2eq/kg).
 
-## Carbon Sequestration(CS)
-> _CS = n * m * t * 1/d * s_
+## Carbon Reduction (CR)
+> _CR = n * m * t * 1/d * s_
 
 where,
-- _CS_ is carbon sequestration (tonCo2eq/year)
+- _CR_ is carbon reduction due to sequestration (tonCo<sub>2</sub>eq/year)
 - _n_ is the number plastic cups collected (cups/month)
 - _m_ is the number of months per year (12 months/year)
 - _t_ is the number of plant seed per cup (seed/cup) 
 - _d_ is the plantation density (200 trees/Rai)
-- _s_ is sequestration rate, depending on tree species and the suitable of the crop land, expressed in JavaScript as follows:
+- _s_ is sequestration rate (tonCo<sub>2</sub>eq/Rai/year), depending on tree species and the suitable of the crop land, expressed in JavaScript as follows:
   
 ```
 var cr = "";
