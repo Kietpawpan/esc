@@ -2,7 +2,7 @@
 _A Case Study on ZPOT Kaeokla for You Project_
 
 ## Background
-Based on Thailand’s population, the country was estimated to emit around 2,887.04 tonCO2eq/day or 1.05 million tons/year due to plastic waste. These emissions contribute to global GHG emissions, highlighting the need to __control plastic consumption and improve waste management practices__.[^1] What can we do?
+Based on Thailand’s population, the country was estimated to emit around 2,887.04 tonCO2eq/day or 1.05 million tons/year due to plastic waste. These emissions contribute to global GHG emissions, highlighting the need to __control plastic consumption and improve waste management practices__.[^1] What should we do?
 
 __Kaeokla for You__ is a carbon emision reduction and CO<sub>2</sub> reduction project run by Zoological Park Organization of Thailand (ZPOT), the Ministry of Natural Resources and Environmnet. The positive impact on carbon reduction from the project can be evaluated using a web app for evaluating the potential atmospheric carbon reduction and the potential carbon emission reduction due to the project, deployed at https://esc.mnre.go.th/app/co2/
 
