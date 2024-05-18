@@ -21,22 +21,22 @@ flowchart LR
 Considering both carbon emission reduction and carbon sequestration, we have:
 
 ## Carbon Emission Reduction (CER)
-> CER = C * w * EF u
+> CER = c * w * e
 
 where,
 - CER is carbon emision reduction (tonCo2eq)
-- C is the number of burned plastic cups (cups)
+- c is the number of burned plastic cups (cups)
 - w is the weight of one plastic cup (0.015 kg) 
-- EF is the average emission factor from plastic cup burning (3.54 kgCo2eq/kg).
+- e is the average emission factor from plastic cup burning (3.54 kgCo2eq/kg).
 
 ## Carbon Sequestration(CS)
-> CS = N * 12 * T * 1/d * s 
+> CS = n * 12 * t * 1/d * s 
 
 where,
 - CS is carbon sequestration (tonCo2eq/year)
-- N is the number plastic cups collected (cups/month)
+- n is the number plastic cups collected (cups/month)
 - 12 is the number of months per year
-- T is the number of plant seed per cup (seed/cup) 
+- t is the number of plant seed per cup (seed/cup) 
 - d is the plantation density (200 trees/Rai)
 - s is sequestration rate for each tree species, depending on the suitable of the land:
   
