@@ -40,3 +40,26 @@ where,
 - d is the plantation density (200 trees/Rai)
 - s is sequestration rate for each tree species, depending on the suitable of the land:
   
+```
+var cr = "";
+if(tree=="sak" && area=="much"){cr=2.16;}
+else if(tree=="yuka" && area=="much"){cr=6.09;}
+else if(tree=="thepha" && area=="much"){cr=6.09;}
+else if(tree=="narong" && area=="much"){cr=4.4;}
+else if(tree=="yak" && area=="much"){cr=6.49;}
+
+else if(tree=="sak" && area=="moderate"){cr=1.72;}
+else if(tree=="yuka" && area=="moderate"){cr=4.77;}
+else if(tree=="thepha" && area=="moderate"){cr=4.4;}
+else if(tree=="narong" && area=="moderate"){cr=3.48;}
+else if(tree=="yak" && area=="moderate"){cr=4.8;}
+
+else if(tree=="sak" && area=="less"){cr=1.36;}
+else if(tree=="yuka" && area=="less"){cr=3.15;}
+else if(tree=="thepha" && area=="less"){cr=4.00;}
+else if(tree=="narong" && area=="less"){cr=2.27;}
+else if(tree=="yak" && area=="less"){cr=0.77;}
+
+else{cr=0;}
+```
+__Source__ TGO (2559)
