@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>MNRE | Info</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://czp.dga.or.th/cportal/sdk/css/v1/trunks.min.css"/>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">    
+<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Round" rel="stylesheet">
+
+
+</head>
+<body>
+  <section class="section">
+    <div class="container"><img src="https://esc.mnre.go.th/info/img/mnre.png" style="width:100px;"/>
+      <h1 class="title" style="margin-left:110px;margin-top:-125px;">
+        ระบบยื่นคำขอข้อมูล
+      </h1>
+      <p class="subtitle"style="margin-left:110px;margin-top:-30px;font-size:14px;">
+       ของ<strong>กระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม</strong><br/><br/>
+      </p>
+    </div>
+
+
+
+     <div  class="tabs-with-content">
+      <div class="tabs is-toggle is-fullwidth">
+        <ul>
+          <li><a>ขอข้อมูล</a></li>
+          <li><a>ติดตามสถานะ</a></li>
+          <li><a>ชำระค่าธรรมเนียม</a></li>
+        </ul>
+      </div>
+      <div>
+ 
+<section class="tab-content">ตาม พ.ร.บ. ข้อมูลข่าวสารของราชการ พ.ศ. 2540
+<div class="field">
+  <label class="label">หมายเลขประจำตัวประชาชนของผู้ขอ</label>
+  <div class="control">
+    <input class="input" type="text" placeholder="1234567890123">
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">รหัสเจ้าหน้าที่</label>
+  <div class="control">
+    <input class="input" type="text" placeholder="*****">
+
+  </div>
+</div>
+<div class="field">
+  <div class="control">
+      ลืมรหัส<a href="#">เจ้าหน้าที่?</a>
+    </label>
+  </div>
+</div>
+
+
+<div class="field">
+  <label class="label">สถานะคำขอ</label>
+  <div class="control">
+    <textarea class="textarea" placeholder="ข้อมูลความคืบหน้าล่าสุด"></textarea>
+  </div>
+</div>
+
+
+<div class="field is-grouped">
+  <div class="control">
+    <button class="button is-link">Submit</button>
+  </div>
+  <div class="control">
+    <button class="button is-link is-light">Cancel</button>
+  </div>
+</div>
+</section>
+
+
+        <section class="tab-content">ระบบ e-Tracking
+
+<div class="field">
+  <label class="label">หมายเลขประจำตัวประชาชนของผู้ขอ</label>
+  <div class="control">
+    <input class="input" type="text" placeholder="1234567890123">
+  </div>
+</div>
+
+<div class="field is-grouped">
+  <div class="control">
+    <button class="button is-link">Submit</button>
+  </div>
+  <div class="control">
+    <button class="button is-link is-light">Cancel</button>
+  </div>
+</div>
+
+
+
+</section>
+        <section class="tab-content">ชำระเงินผ่าน e-Banking (เฉพาะสำนักงานปลัดกระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม)
+
+    <div class="table-container">
+      <table class="table is-bordered is-striped  is-hoverable is-fullwidth">
+        <tbody>
+          <tr>
+            <th style="width:120px"><label>เลขที่บัญชี:</label></th>
+            <td>011111111</td>
+          </tr>
+          <tr>
+            <th><label>ธนาคาร:</label></th>
+            <td>กรุงไทย</td>
+          </tr>
+          <tr>
+            <th><label>ชื่อบัญชี</label></th>
+            <td>สำนักงาน...</td>
+          </tr>
+          <tr>
+            <th><label>ค่าธรรมเนียม</label></th>
+            <td>ตรวจสอบค่าธรรมเนียม</td>
+          </tr>
+
+          <tr>
+            
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+      </div>
+    </div>
+
+
+ <script type="text/javascript">
+      let tabsWithContent = (function () {
+        let tabs = document.querySelectorAll('.tabs li');
+        let tabsContent = document.querySelectorAll('.tab-content');
+
+        let deactvateAllTabs = function () {
+          tabs.forEach(function (tab) {
+            tab.classList.remove('is-active');
+          });
+        };
+
+        let hideTabsContent = function () {
+          tabsContent.forEach(function (tabContent) {
+            tabContent.classList.remove('is-active');
+          });
+        };
+
+        let activateTabsContent = function (tab) {
+          tabsContent[getIndex(tab)].classList.add('is-active');
+        };
+
+        let getIndex = function (el) {
+          return [...el.parentElement.children].indexOf(el);
+        };
+
+        tabs.forEach(function (tab) {
+          tab.addEventListener('click', function () {
+            deactvateAllTabs();
+            hideTabsContent();
+            tab.classList.add('is-active');
+            activateTabsContent(tab);
+          });
+        })
+
+        tabs[0].click();
+      })();
+
+    </script>
+
+ <script src="https://czp.dga.or.th/cportal/sdk/iu/v3/sdk.js"></script>
+
+
+
+
+</body>
+</html>
