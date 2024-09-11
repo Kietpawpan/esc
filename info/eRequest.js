@@ -137,9 +137,7 @@ else{oTel = "";}
 var idNo = Array.from(text2);
 if(text=="" || text2=="" || house=="" || text3=="" || info1=="" || checkType=="" || obj=="" || tel==""){alert("โปรดกรอกข้อมูลให้ครบถ้วน");}
 else if(text2.length!==13){alert("หมายเลขประจำตัวประชาชนไม่ถูกต้อง");}
-else{
-alert(text2.length);
-document.getElementById("iRequest").value =
+else{document.getElementById("iRequest").value =
             "เรียน " + opener + "\n\nข้าพเจ้า " + text + " หมายเลขประจำตัวประชาชน " + text2 + " ที่อยู่ " + house + " มีความประสงค์ขอข้อมูลข่าวสารของ" + text3 +
                         " ดังต่อไปนี้\n" +
             "1. " + info1 +
@@ -303,5 +301,5 @@ else if(text3=="องค์การสวนสัตว์แห่งปร�
 }
 
 function tracking() {
-window.open("html/track.php");
+window.open("https://esc.mnre.go.th/app/e-tracking.php");
 }
