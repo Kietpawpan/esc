@@ -1,0 +1,55 @@
+﻿
+The e-Request Project
+
+https://esc.mnre.go.th/info
+
+The e-Request Project is the first web application 
+development effort aimed at creating a robust 
+e-service on the Elastic Cloud Server under the 
+Government Data Center and Cloud Service Project, 
+by the MNRE Service Link Center. The project is 
+solely managed by a group of civil servants 
+at the Service Link Center.
+
+In 2024, six core contributors formed the developer team:
+
+   Montri Kiatphaophan     
+   Prachakchai Atkonghan      
+   Tatsani Detchaprorom
+   Phiphat Puengbun	   
+   Chirapon Kanchanaaramwong  
+   Chirapha Hasunheng
+
+MNRE officials who tested the e-Request system 
+and gave helpful feedbacks:
+    
+
+This project would not have been possible without 
+the works of the following organizations and individuals:
+
+   Government Data and Cloud Service, DE	
+   [Cloud Service]
+
+   Apache Software Foundation			
+   [http software]
+
+   The PHP Group				
+   [PHP software]
+
+   Github					
+   [Version Control]
+
+   Erin E. Sullivan 				
+   [Book Layout]
+
+   Adrino Raiano				
+   [flowchart.js]
+
+   Yi-Cyuan Chen				
+   [js-sha3]
+
+   Andrew Brampton				
+   [js-sequence-diagram]
+
+   Montri Kiatphaophan                          
+   [Service Design & Coding]

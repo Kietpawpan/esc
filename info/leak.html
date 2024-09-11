@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/iRequest.css">
+    <link rel="stylesheet" href="css/chat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/png" href="../img/krut.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+   
+
+
+<title>MNRE | PDPA</title>
+
+<style>
+.loader {
+  border: 6px solid lightgrey;
+  border-radius: 50%;
+  border-top: 6px solid grey;
+  width: 40px;
+  height: 40px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
+
+
+</head>
+
+<body onload="right()">
+    	<nav>
+        <div class="navbar">
+            <img class="dpimg" onclick="openFullScreenDP()" src="images/mnre.png" alt="">
+            <div class="personalInfo">
+                <label id="name">ศูนย์บริการร่วม ทส.</label>
+                <label 
+			id="lastseen">&copy; 2024 
+			
+			<font color='#94bab3'>MNRE-SLC
+			</font>
+			</a>
+		</label>
+		<br>
+           </div>
+    </div>
+    </nav>
+	<input 
+		style='color:black;
+			background-color:lightgrey;
+			border-color:grey' 
+		type="text" 
+		id="Question" 
+		value="e-Request" 
+		title="ID">
+
+ 	<div 
+		class="scrollable" 
+		id="myScrollable">
+      	<div 
+		id="chatting" 
+		class="chatting">
+
+		<ul id="Answer">
+   			<li><a href="#">
+<center><div>กำลังเชื่อมต่อระบบแจ้งเหตุรั่วไหลของข้อมูล<br>https://gppc-onde.go.th</div></center>
+<div style="position:absolute;margin:18px 0px 20px 210px;color:blue;" id="check"></div>
+</a></li>
+<script>
+function right(){
+	document.getElementById('check').innerHTML = "<div class='loader'></div>";
+	setTimeout(() => {window.location.replace('https://gppc-app.onde.go.th/dynamic-incident/a5502c72-f8f0-4a01-8bf8-8644b29576fc')
+	}, 5000);
+}
+ </script> 		
+</body>
+</html>

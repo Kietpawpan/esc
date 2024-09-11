@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<!Copyright © 2023 MNRE-SLC | All rights reserved.>
+<!Developer: servicelinkcenter@mnre.go.th>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/iRequest.css">
+    <link rel="stylesheet" href="css/chat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/png" href="img/krut.png">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+
+<title>MNRE | e-Request</title>
+
+</head>
+
+<body>
+    	<nav>
+        <div class="navbar">
+            <img class="dpimg" onclick="openFullScreenDP()" src="img/mnre.png" style="width:30px;">
+            <div class="personalInfo">
+                <label id="name">สำนักงานปลัดกระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม</label>
+                <label id="lastseen">
+<a style="color:white;text-decoration:none" href='index.html'><font color='#94bab3'>Home</font></a> | 
+<a style="color:white;text-decoration:none" href='license.html'><font color='#94bab3'>License</font></a>
+
+</label>
+            </div>
+        </div>
+    	</nav>
+	<input style='color:black;background-color:lightgrey;border-color:grey;margin-top:10px;'  type="text" id="Question" value="คู่มือประชาชน"title="ID">
+ 	<div class="scrollable" id="myScrollable">
+      <div id="chatting" class="chatting">
+	<ul id="Answer">
+   		<li><a href="#">
+
+<h2>ขั้นตอน</h2>
+การยื่นคำขอข้อมูลข่าวสารของกระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อมแบบออนไลน์ มีขั้นตอน ดังนี้<br><br>
+
+1. เข้าสู่ระบบ e-Request โดยกดปุ่ม 
+<button class="btn" style="border-radius:5px;padding: 2px 5px 5px 5px;" onclick='window.location.replace("https://esc.mnre.go.th/info");'> <i class="fa fa-sign-in">  Login</button></i>
+
+<br><br>2. อ่านประกาศความเป็นส่วนตัว โดยกดปุ่ม 
+<button class="btn" style="border-radius:5px;padding: 2px 5px 5px 5px;" onclick='window.location.replace("https://esc.mnre.go.th/info/newpdpa.html");'> <i class="fa fa-file-text-o">  Privacy Notice</button></i>
+
+<br><br>3. กรอกข้อมูลใน e-Form 
+
+<br><br>4. เมื่อครบถ้วนแล้ว กดปุ่ม <button class="btn" style="border-radius:5px;padding: 2px 5px 5px 5px"><i class="fa fa- fa-pencil-square-o"></i> สร้างคำขอ</button></i> ร่างคำขอจะปรากฏในกล่องข้อความ 
+
+<br><br>5. ตรวจสอบความถูกต้องของร่างคำขอ ทั้งนี้ ท่านอาจพิมพ์แก้ไขเพิ่มเติมข้อความได้ตามที่เห็นเหมาะสม 
+
+<br><br>6. กดปุ่ม <button class="btn" style="border-radius:5px;padding: 2px 5px 5px 5px">คัดลอก</button></i> เพื่อคัดลอกคำขอไว้บน clipboard
+
+<br><br>7. ส่งอีเมล โดยกดปุ่ม <button style="border-radius:5px;padding: 2px 5px 5px 5px" class="btn"><i class="fa fa-apple"></i> iOS</button> หรือปุ่ม <button style="border-radius:5px;padding: 2px 5px 5px 5px" class="btn"><i class="fa fa-google"></i>mail</button> 
+
+<br><br>8. วางข้อความที่คัดลอกไว้ แล้วส่งอีเมลตามปกติ คำขอของท่านจะถูกส่งไปยังอีเมลของหน่วยงานที่ท่านเลือกไว้  
+
+<br><br>9. หน่วยงานพิจารณาคำขอ ทั้งนี้ มติคณะรัฐมนตรี เมื่อวันที่ 28 ธันวาคม 2547 กำหนดให้หน่วยงานที่ได้รับคำขอต้องปฏิบัติ กรณีที่ข้อมูลข่าวสารที่ขอมีเป็นจำนวนมาก หรือไม่สามารถดำเนินการให้แล้วเสร็จ<b><u>ภายใน 15 วัน</u></b> จะต้องแจ้งให้ผู้ขอทราบภายใน 15 วัน รวมถึงแจ้งกำหนดวันที่จะดำเนินการแล้วเสร็จให้ผู้ขอทราบด้วย (<b><u>ไม่เกิน 45 วันทำการ นับแต่วันที่ได้รับคำขอ</u></b>) 
+
+<br><br>10. หากยื่นคำขอผ่านระบบ e-Tracking แล้ว ท่านอาจติดตามความคืบหน้า โดยกดปุ่ม <button style="border-radius:5px;padding: 2px 5px 5px 5px" class="btn" onclick="window.location.replace('../app/e-tracking/index.php')"><i class="fa fa-search"></i> Tracking</button>
+
+<br><br>
+
+<h3>อัตราค่าธรรมเนียม</h3>
+1. ค่าจัดทำสำเนาข้อมูลข่าวสาร  ขนาด A4 หน้าละ 1 บาท<br>
+2. ค่ารับรองสำเนาถูกต้อง (ถ้าร้องขอ) คำรับรองละ 5 บาท<br>
+3. กรณีขอรับไฟล์อิเล็กทรอนิกส์ทางอีเมล ไม่มีค่าธรรมเนียม<br>
+
+<br>
+<h3>กฎหมายและระเบียบที่เกี่ยวข้อง</h3>
+1. พระราชบัญญัติข้อมูลข่าวสารของราชการ พ.ศ. 2540<br>
+2. พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562<br>
+3. พระราชบัญญัติการปฏิบัติราชการราชการทางอิเล็กทรอนิกส์ พ.ศ. 2565<br>
+4. ระเบียบสำนักงานปลัดกระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม ว่าด้วยข้อมูลข่าวสารของสำนักงานปลัดกระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม พ.ศ. 2549 และที่แก้ไขเพิ่มเติม<br><br>
+<li><a href="javascript:history.go(-1)"><i class='fa fa-angle-left' style='font-size:20px;color:#0096FF'> Back</i></a></li>	
+		
+</body>
+</html>
